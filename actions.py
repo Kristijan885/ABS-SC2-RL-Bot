@@ -46,12 +46,12 @@ def get_actions(state, action):
     # 3: Send scout (idle probe sent to enemy base)
     elif action == 3:
         try:
-            if (self.iteration - self.last_sent) > 200:
-                if state.units("PROBE").idle.exists:
-                    probe = random.choice(state.units("PROBE").idle)
-                else:
-                    probe = random.choice(state.units("PROBE"))
-                self.last_sent = self.iteration
+            # if (self.iteration - self.last_sent) > 200:
+            #     if state.units("PROBE").idle.exists:
+            #         probe = random.choice(state.units("PROBE").idle)
+            #     else:
+            #         probe = random.choice(state.units("PROBE"))
+            #     self.last_sent = self.iteration
                 return actions.FUNCTIONS.Attack_minimap("now", state.enemy_start_locations[0])
         except Exception as e:
             print("Error during action 3 scout:", e)
