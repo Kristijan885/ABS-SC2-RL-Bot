@@ -1,0 +1,7 @@
+PySC2
+tensorflow
+stable-baselines3
+numpy
+pandas
+gymnasium
+protobuf==3.20.*
