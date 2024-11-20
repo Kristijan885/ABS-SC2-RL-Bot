@@ -1,7 +1,7 @@
-PySC2
+PySC2~=4.0.0
 tensorflow
 stable-baselines3
-numpy
+numpy~=2.0.2
 pandas
-gymnasium
+gymnasium~=0.29.1
 protobuf==3.20.*
