@@ -24,11 +24,11 @@ class PySC2GymWrapper(gym.Env):
                 use_feature_units=True
             ),
             step_mul=step_mul,
-            visualize=visualize
+            visualize=visualize,
+            realtime=True
         )
 
-        # self.action_space = spaces.MultiDiscrete(num_actions)
-        self.action_space = spaces.Discrete(num_actions)
+        self.action_space = spaces.MultiDiscrete(num_actions)
         minimap_shape = self.sc2_env.observation_spec()[0]["feature_minimap"]
         self.observation_space = spaces.Box(
             low=0, high=255, shape=minimap_shape, dtype=np.float32
@@ -44,8 +44,8 @@ class PySC2GymWrapper(gym.Env):
         return observation, info
 
     def step(self, action):
-        # action_step = self.action_manager.get_actions(self.current_obs.observation, action)
-        action_step = self.action_manager.get_actions(self.current_obs.observation, 0)
+        action_step = self.action_manager.get_actions(self.current_obs.observation, action)
+        # action_step = self.action_manager.get_actions(self.current_obs.observation, 0)
 
         # Execute the action in the SC2 environment (no need to await it)
         timestep = self.sc2_env.step(action_step)

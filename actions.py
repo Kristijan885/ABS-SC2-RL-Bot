@@ -18,20 +18,11 @@ class ActionManager:
     def get_actions(self, state, action):
 
         actions_list = []
-        # if idle_workers_exist(state):
-        #     actions_list.append(redistribute_workers(state))
-
-        print("------------------------------------------------------------")
-        # for key in state.keys():
-        #     print(key)
-
-        #print(state['feature_units'])
-
-        if len(state.available_actions) != 5:
-            print(state.available_actions)
+        if idle_workers_exist(state):
+            actions_list.append(redistribute_workers(state))
 
         # 0: expand (move to next spot or build units)
-        if action == 0:
+        if action[0]:
             try:
                 player = state['player']
                 food_used = player[3]  # index 3 corresponds to 'food_used'
@@ -47,7 +38,7 @@ class ActionManager:
                     else:
                         actions_list.append(select_unit_by_type(state, units.Protoss.Probe))
 
-                    return actions_list
+                    # return actions_list
 
                 queued = False
                 if food_left < 4:
@@ -55,7 +46,7 @@ class ActionManager:
                     townhall = next((unit for unit in state.feature_units if unit.unit_type == units.Protoss.Nexus),
                                     None)
                     if townhall.any() and actions.FUNCTIONS.Build_Pylon_screen.id in state['available_actions']:
-                        pylon_position = (townhall.x + 20, townhall.y + 20)  # Example position near townhall
+                        pylon_position = (action[1], action[2])  # Example position near townhall
                         print(pylon_position)
                         actions_list.append(actions.FunctionCall(actions.FUNCTIONS.Build_Pylon_screen.id,
                                                                  [[queued], pylon_position]))
@@ -76,7 +67,7 @@ class ActionManager:
                 return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]  # No-op in case of an error
 
         # 1: build stargate (or other buildings)
-        elif action == 1:
+        if action[1] == 1:
             try:
                 # Build stargate and related structures
                 for nexus in state.townhalls:
@@ -149,33 +140,92 @@ def idle_workers_exist(obs):
     return obs.player.idle_worker_count > 0 and actions.FUNCTIONS.select_idle_worker.id in obs.available_actions
 
 
-# def redistribute_workers(obs):
-#     """
-#     Redistribute idle or oversaturated workers to nearby resources.
-#     """
-#     player_relative = obs.feature_screen.player_relative
-#     selected_unit = obs.single_select
-#
-#     actions_list = []
-#
-#     # Step 1: Select all idle workers
-#     if idle_workers_exist(obs):
-#         actions_list.append(actions.FUNCTIONS.select_idle_worker("select"))
-#
-#     # Step 2: Command workers to nearest mineral patch
-#     minerals = np.array(_xy_locs(player_relative == features.PlayerRelative.NEUTRAL))
-#     if selected_unit.any() and minerals.any():
-#         worker_x, worker_y = selected_unit[0].x, selected_unit[0].y
-#         distances = np.linalg.norm(minerals - np.array([worker_x, worker_y]), axis=1)
-#         closest_mineral_patch = minerals[np.argmin(distances)]
-#
-#         actions_list.append(actions.FUNCTIONS.Smart_screen("now", closest_mineral_patch))
-#
-#     # If no actions are available, return a no-op
-#     if not actions_list:
-#         return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
-#
-#     return actions_list
+def move_screen(obs, action):
+    if actions.FUNCTIONS.move_camera.id in obs.available_actions:
+        return actions.FunctionCall(actions.FUNCTIONS.move_camera.id, [(action[1], action[2])])
+
+    return actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])
+
+
+# Needs to have selected worker first
+# TODO Make sure selected geyser isn't in use
+def build_assimilator(obs):
+    actions_list = []
+    queued = False
+    can_build = False
+
+    if not is_worker_selected(obs):
+        actions_list.append(select_worker(obs))
+        queued = True
+        mineral_count = obs.player[1]
+        can_build = mineral_count > 74
+
+    if (actions.FUNCTIONS.Build_Assimilator_screen.id in obs.available_actions) or (queued and can_build):
+        geysers = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.VespeneGeyser
+                        and unit.assigned_harvesters == 0), None)
+
+        if geysers is not None and geysers.any():
+            actions_list.append(actions.FunctionCall(actions.FUNCTIONS.Build_Assimilator_screen.id,
+                                                     [[queued], (geysers.x, geysers.y)]))
+            return actions_list
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+
+
+# TODO Needs to have selected worker first
+def build_stargate(obs, xy_coords):
+    actions_list = []
+    queued = False
+    can_build = False
+
+    if not is_worker_selected(obs):
+        actions_list.append(select_worker(obs))
+        queued = True
+        mineral_count = obs.player[1]
+        gas_count = obs.player[2]
+        can_build = mineral_count >= 150 and gas_count >= 150
+
+    if (actions.FUNCTIONS.Build_Stargate_screen.id in obs.available_actions) or (queued and can_build):
+        return [
+            actions.FunctionCall(actions.FUNCTIONS.Build_Stargate_screen.id, [[queued], (xy_coords[1], xy_coords[2])])]
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+
+
+# TODO Cybernetics Core
+# TODO Pylons
+
+def select_worker(obs):
+    if idle_workers_exist(obs):
+        return actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])
+
+    if actions.FUNCTIONS.select_point.id in obs.available_actions:
+        probes = next((unit for unit in obs.feature_units if unit.unit_type == units.Protoss.Probe), None)
+
+        if probes is not None and probes.any():
+            queued = False
+            return actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (probes.x, probes.y)])
+
+    return actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])
+
+
+def redistribute_workers(obs):
+    """
+    Redistribute idle workers to mineral field in view
+    """
+    selected_unit = obs.single_select
+
+    if (selected_unit is None or selected_unit[0].unit_type != units.Protoss.Probe) and idle_workers_exist(obs):
+        return actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])
+
+    minerals = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.MineralField),
+                    None)
+
+    queued = False
+    if selected_unit.any() and minerals.any():
+        return actions.FunctionCall(actions.FUNCTIONS.Smart_screen.id, [[queued], [minerals.x, minerals.y]])
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
 
 
 def _xy_locs(mask):
