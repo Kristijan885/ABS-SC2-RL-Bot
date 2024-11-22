@@ -1,4 +1,6 @@
 import numpy as np
+import random
+import math
 
 from pysc2.lib import features, actions
 
@@ -47,3 +49,14 @@ def get_enemy_completed_units_by_type(self, obs, unit_type):
 def get_distances(self, obs, units, xy):
     units_xy = [(unit.x, unit.y) for unit in units]
     return np.linalg.norm(np.array(units_xy) - np.array(xy), axis=1)
+
+
+def random_position_near_townhall(townhall, radius):
+    # Generate a random angle in radians
+    theta = random.uniform(0, 2 * math.pi)
+
+    # Calculate new position
+    x = int(townhall[0] + radius * math.cos(theta))
+    y = int(townhall[1] + radius * math.sin(theta))
+
+    return x, y
