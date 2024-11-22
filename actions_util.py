@@ -2,7 +2,7 @@ import numpy as np
 import random
 import math
 
-from pysc2.lib import features, actions
+from pysc2.lib import features, actions, units
 
 
 def select_unit_by_type(state, unit_type_selection):
@@ -18,6 +18,11 @@ def select_unit_by_type(state, unit_type_selection):
         return actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[select_func_id], worker_position])
 
     return actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])
+
+
+def is_worker_selected(obs):
+    selected_unit = obs.single_select
+    return selected_unit.any() and selected_unit[0].unit_type == units.Protoss.Probe
 
 
 def get_my_units_by_type(self, obs, unit_type):

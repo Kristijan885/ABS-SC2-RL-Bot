@@ -6,7 +6,7 @@ from absl import app
 
 # Define the main function
 def main(argv):
-    env = PySC2GymWrapper(5, visualize=True)
+    env = PySC2GymWrapper([5, 84, 84], visualize=True)
 
     # Separate env for evaluation
     # eval_env = PySC2GymWrapper(5)
