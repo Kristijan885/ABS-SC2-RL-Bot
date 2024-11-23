@@ -25,7 +25,7 @@ class PySC2GymWrapper(gym.Env):
             ),
             step_mul=step_mul,
             visualize=visualize,
-            realtime=True
+            realtime=False
         )
 
         self.action_space = spaces.MultiDiscrete(num_actions)

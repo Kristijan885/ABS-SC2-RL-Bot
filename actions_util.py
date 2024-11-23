@@ -65,3 +65,12 @@ def random_position_near_townhall(townhall, radius):
     y = int(townhall[1] + radius * math.sin(theta))
 
     return x, y
+
+def idle_workers_exist(obs):
+    return obs.player.idle_worker_count > 0 and actions.FUNCTIONS.select_idle_worker.id in obs.available_actions
+
+def validate_screen_coords(x, y, max_size=83):
+    """Validate and clamp screen coordinates to valid ranges."""
+    x = max(0, min(max_size, int(round(float(x)))))
+    y = max(0, min(max_size, int(round(float(y)))))
+    return x, y
