@@ -11,7 +11,7 @@ def select_unit_by_type(state, unit_type_selection):
         if unit.unit_type == unit_type_selection
     ]
 
-    if worker_units:
+    if worker_units and worker_units[0].x >= 0 and worker_units[0].y >= 0:
         worker = worker_units[0]  # Select the first available worker
         worker_position = [worker.x, worker.y]
         select_func_id = 0
@@ -79,16 +79,16 @@ def validate_screen_coords(x, y, max_size=83):
 
 def select_worker(obs):
     if idle_workers_exist(obs):
-        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
+        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, [[0]])]
 
     if actions.FUNCTIONS.select_point.id in obs.available_actions:
         probes = next((unit for unit in obs.feature_units if unit.unit_type == units.Protoss.Probe), None)
 
-        if probes is not None and probes.any():
+        if probes is not None and probes.any() and probes.x >= 0 and probes.y >= 0:
             queued = False
             return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (probes.x, probes.y)])]
 
-    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+    return []
 
 
 # TODO Check if selected worker has build queue
@@ -115,3 +115,18 @@ def get_camera_position_quadrant(obs):
     y = 0 if row < 32 else 1
 
     return x, y
+
+def get_pylons(obs):
+    pylons = [unit for unit in obs.feature_units
+              if unit.unit_type == units.Protoss.Pylon
+              and unit.owner == obs.player[0]]
+    return pylons
+
+def is_pylon_in_range(obs, pylons, xy_coords):
+    return_value = False
+    for pylon in pylons:
+        distance = ((pylon.x - xy_coords[0]) ** 2 + (pylon.y - xy_coords[1]) ** 2) ** 0.5
+        if distance <= 10:
+            return_value = True
+            break
+    return return_value

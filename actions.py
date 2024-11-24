@@ -19,7 +19,10 @@ class ActionManager:
             build_nexus,
             build_stargate,
             redistribute_workers,
-            select_worker
+            select_worker,
+            build_cybernetics_core,
+            build_gateway,
+            train_probe
         ]
 
     def get_actions(self, state, action):
@@ -27,10 +30,7 @@ class ActionManager:
         Executes the appropriate action based on the given integer input.
         """
         try:
-            return self.actions[
-                action[0]
-                # 3
-            ](state, (action[1], action[2]))
+            return self.actions[action[0]](state, (action[1], action[2]))
 
         except Exception as e:
             print(f"Error during action: {self.actions[action[0]].__name__}: {e}")
@@ -82,49 +82,32 @@ def build_nexus(obs, _):
     return build_object(obs, nexus_coords, actions.FUNCTIONS.Build_Nexus_screen)
 
 
-# TODO Finish
+# TODO See why the build_probe function is always unavailable
 def train_probe(obs, _):
+    action_list = []
     mineral_count = obs.player[1]
     food_used = obs.player[3]
     food_cap = obs.player[4]
 
-    if mineral_count < 50 and food_used >= food_cap:
+    # Check if we have enough resources and supply
+    if mineral_count < 50 or food_used >= food_cap:
         return []
 
     nexus = next((unit for unit in obs.feature_units if unit.unit_type == units.Protoss.Nexus and
                   unit.owner == obs.player[0]), None)
 
+    if nexus is None:
+        return []
 
-    #
-    # # 3: Send scout (idle probe sent to enemy base)
-    # elif action == 3:
-    #     try:
-    #         if (self.iteration - self.last_sent) > 200:
-    #             if state.units("PROBE").idle.exists:
-    #                 probe = random.choice(state.units("PROBE").idle)
-    #             else:
-    #                 probe = random.choice(state.units("PROBE"))
-    #             self.last_sent = self.iteration
-    #         # TODO CHECK IF VALID SYNTAX!!!
-    #         actions_list.append(actions.FUNCTIONS.Attack_minimap("now", (probe, state.enemy_start_locations[0])))
-    #     except Exception as e:
-    #         print("Error during action 3 scout:", e)
-    #
-    #
-    #     except Exception as e:
-    #         print("Error during action 4 attack:", e)
-    #
-    # # 5: Voidray flee (move back to base)
-    # elif action == 5:
-    #     try:
-    #         if state.units("VOIDRAY").amount > 0:
-    #             for vr in state.units("VOIDRAY"):
-    #                 actions_list.append(actions.FUNCTIONS.Attack_minimap("now", state.start_location))
-    #
-    #     except Exception as e:
-    #         print("Error during action 5 flee:", e)
-    #
-    # return actions_list if len(actions_list) > 0 else [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+    if actions.FUNCTIONS.Train_Probe_quick.id in obs.available_actions:
+        if actions.FUNCTIONS.select_point.id in obs.available_actions:
+            action_list.append(actions.FunctionCall(actions.FUNCTIONS.select_point.id,
+                                         [[0], [nexus.x, nexus.y]]))
+
+
+        action_list.append(actions.FunctionCall(actions.FUNCTIONS.Train_Probe_quick.id, []))
+        print('it should be building a probe')
+    return action_list
 
 
 def move_screen(obs, xy_coords):
@@ -132,11 +115,6 @@ def move_screen(obs, xy_coords):
         return [actions.FunctionCall(actions.FUNCTIONS.move_camera.id, [(xy_coords[0], xy_coords[1])])]
 
     return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
-
-
-# Needs to have selected worker first
-# TODO Make sure selected geyser isn't in use
-# Non-positive check, selected unit build queue check
 
 
 def is_worker_selected(obs):
@@ -147,6 +125,100 @@ def is_worker_selected(obs):
         return True
     return False
 
+def build_stargate(obs, xy_coords):
+    mineral_count = obs.player[1]
+    vespene_count = obs.player[2]
+
+    if mineral_count < 150 or vespene_count < 150:
+        return []
+
+    pylons = get_pylons(obs)
+
+    if not pylons:
+        return []
+
+    pylon_power = is_pylon_in_range(obs, pylons, xy_coords)
+
+    if pylon_power:
+        return build_object(obs, xy_coords, actions.FUNCTIONS.Build_Stargate_screen)
+
+
+    return []
+
+def build_cybernetics_core(obs, xy_coords):
+    mineral_count = obs.player[1]
+
+    if mineral_count < 150:
+        return []
+
+    return build_object(obs, xy_coords, actions.FUNCTIONS.Build_CyberneticsCore_screen)
+
+
+def build_gateway(obs, xy_coords):
+    mineral_count = obs.player[1]
+
+    if mineral_count < 150:
+        return []
+
+
+    return build_object(obs, xy_coords, actions.FUNCTIONS.Build_Gateway_screen)
+
+
+
+def redistribute_workers(obs, _):
+    """
+    Redistribute idle workers to mineral field in view
+    """
+    selected_unit = obs.single_select
+
+    if (selected_unit is None or selected_unit[0].unit_type != units.Protoss.Probe) and idle_workers_exist(obs):
+        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
+
+    minerals = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.MineralField),
+                    None)
+
+    queued = False
+    if selected_unit.any() and minerals.any() and (minerals.x >= 0 and minerals.y >= 0):
+        return [actions.FunctionCall(actions.FUNCTIONS.Smart_screen.id, [[queued], [minerals.x, minerals.y]])]
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+
+
+def _xy_locs(mask):
+    """Returns the (y, x) coordinates of non-zero values in a mask."""
+    y, x = np.nonzero(mask)
+    return list(zip(x, y))
+
+
+# # 3: Send scout (idle probe sent to enemy base)
+# elif action == 3:
+#     try:
+#         if (self.iteration - self.last_sent) > 200:
+#             if state.units("PROBE").idle.exists:
+#                 probe = random.choice(state.units("PROBE").idle)
+#             else:
+#                 probe = random.choice(state.units("PROBE"))
+#             self.last_sent = self.iteration
+#         # TODO CHECK IF VALID SYNTAX!!!
+#         actions_list.append(actions.FUNCTIONS.Attack_minimap("now", (probe, state.enemy_start_locations[0])))
+#     except Exception as e:
+#         print("Error during action 3 scout:", e)
+#
+#
+#     except Exception as e:
+#         print("Error during action 4 attack:", e)
+#
+# # 5: Voidray flee (move back to base)
+# elif action == 5:
+#     try:
+#         if state.units("VOIDRAY").amount > 0:
+#             for vr in state.units("VOIDRAY"):
+#                 actions_list.append(actions.FUNCTIONS.Attack_minimap("now", state.start_location))
+#
+#     except Exception as e:
+#         print("Error during action 5 flee:", e)
+#
+# return actions_list if len(actions_list) > 0 else [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
 
 # def build_assimilator(obs, _):
 #     """Build an assimilator on an available geyser."""
@@ -193,52 +265,3 @@ def is_worker_selected(obs):
 #
 #     return actions_list
 
-
-# TODO Needs to have selected worker first
-
-
-def build_stargate(obs, xy_coords):
-    actions_list = []
-    queued = False
-    can_build = False
-
-    if not is_worker_selected(obs):
-        actions_list.append(select_worker(obs))
-        queued = True
-        mineral_count = obs.player[1]
-        gas_count = obs.player[2]
-        can_build = mineral_count >= 150 and gas_count >= 150
-
-    if (actions.FUNCTIONS.Build_Stargate_screen.id in obs.available_actions) or (queued and can_build):
-        return [
-            actions.FunctionCall(actions.FUNCTIONS.Build_Stargate_screen.id, [[queued], (xy_coords[1], xy_coords[2])])]
-
-    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
-
-
-# TODO Cybernetics Core
-# TODO Pylons
-
-def redistribute_workers(obs, _):
-    """
-    Redistribute idle workers to mineral field in view
-    """
-    selected_unit = obs.single_select
-
-    if (selected_unit is None or selected_unit[0].unit_type != units.Protoss.Probe) and idle_workers_exist(obs):
-        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
-
-    minerals = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.MineralField),
-                    None)
-
-    queued = False
-    if selected_unit.any() and minerals.any():
-        return [actions.FunctionCall(actions.FUNCTIONS.Smart_screen.id, [[queued], [minerals.x, minerals.y]])]
-
-    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
-
-
-def _xy_locs(mask):
-    """Returns the (y, x) coordinates of non-zero values in a mask."""
-    y, x = np.nonzero(mask)
-    return list(zip(x, y))
