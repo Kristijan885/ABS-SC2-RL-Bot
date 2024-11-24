@@ -21,11 +21,15 @@ class PySC2GymWrapper(gym.Env):
             ],
             agent_interface_format=features.AgentInterfaceFormat(
                 feature_dimensions=features.Dimensions(screen=84, minimap=64),
-                use_feature_units=True
+                use_feature_units=True,
+                crop_to_playable_area=True
+                # raw_resolution=(84, 84),
+                # use_raw_actions=True,
+                # use_raw_units=True
             ),
             step_mul=step_mul,
             visualize=visualize,
-            realtime=False
+            realtime=True,
         )
 
         self.action_space = spaces.MultiDiscrete(num_actions)

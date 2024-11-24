@@ -60,17 +60,58 @@ def random_position_near_townhall(townhall, radius):
     # Generate a random angle in radians
     theta = random.uniform(0, 2 * math.pi)
 
-    # Calculate new position
     x = int(townhall[0] + radius * math.cos(theta))
     y = int(townhall[1] + radius * math.sin(theta))
 
     return x, y
 
+
 def idle_workers_exist(obs):
     return obs.player.idle_worker_count > 0 and actions.FUNCTIONS.select_idle_worker.id in obs.available_actions
+
 
 def validate_screen_coords(x, y, max_size=83):
     """Validate and clamp screen coordinates to valid ranges."""
     x = max(0, min(max_size, int(round(float(x)))))
     y = max(0, min(max_size, int(round(float(y)))))
+    return x, y
+
+
+def select_worker(obs):
+    if idle_workers_exist(obs):
+        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
+
+    if actions.FUNCTIONS.select_point.id in obs.available_actions:
+        probes = next((unit for unit in obs.feature_units if unit.unit_type == units.Protoss.Probe), None)
+
+        if probes is not None and probes.any():
+            queued = False
+            return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (probes.x, probes.y)])]
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+
+
+# TODO Check if selected worker has build queue
+def build_object(obs, coords, function):
+    actions_list = []
+    queued = False
+
+    if not is_worker_selected(obs):
+        actions_list.append(select_worker(obs))
+        queued = True
+
+    if (coords[0] >= 0 and coords[1] >= 0) and (function.id in obs.available_actions or queued):
+        actions_list.append(actions.FunctionCall(function.id, [[queued], coords]))
+        return actions_list
+
+    return []
+
+
+def get_camera_position_quadrant(obs):
+    column = np.argmax(np.sum(obs.feature_minimap.camera, axis=0))
+    row = max(enumerate(obs.feature_minimap.camera), key=lambda z: sum(z[1]))[0]
+
+    x = 0 if column < 32 else 1
+    y = 0 if row < 32 else 1
+
     return x, y
