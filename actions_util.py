@@ -22,7 +22,7 @@ def select_unit_by_type(state, unit_type_selection):
 
 def is_worker_selected(obs):
     selected_unit = obs.single_select
-    return selected_unit.any() and selected_unit[0].unit_type == units.Protoss.Probe
+    return selected_unit.any() and selected_unit[0].unit_type == units.Terran.SCV
 
 
 def get_my_units_by_type(self, obs, unit_type):
@@ -82,11 +82,11 @@ def select_worker(obs):
         return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, [[0]])]
 
     if actions.FUNCTIONS.select_point.id in obs.available_actions:
-        probes = next((unit for unit in obs.feature_units if unit.unit_type == units.Protoss.Probe), None)
+        SCV = next((unit for unit in obs.feature_units if unit.unit_type == units.Terran.SCV), None)
 
-        if probes is not None and probes.any() and probes.x >= 0 and probes.y >= 0:
+        if SCV is not None and SCV.any() and SCV.x >= 0 and SCV.y >= 0:
             queued = False
-            return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (probes.x, probes.y)])]
+            return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (SCV.x, SCV.y)])]
 
     return []
 
@@ -130,3 +130,12 @@ def is_pylon_in_range(obs, pylons, xy_coords):
             return_value = True
             break
     return return_value
+
+def has_barracks(obs):
+    for unit in obs.feature_units:
+        if unit.unit_type == units.Terran.Barracks:
+
+            return True, (unit.x, unit.y)
+
+    return False, None
+

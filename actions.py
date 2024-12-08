@@ -13,16 +13,19 @@ class ActionManager:
         self.last_sent = None
         self.iteration = 0
         self.actions = [
-            move_screen,
-            build_pylon,
-            build_assimilator,
-            build_nexus,
-            build_stargate,
-            redistribute_workers,
+            # move_screen,
+            # build_pylon,
+            # build_assimilator,
+            # build_nexus,
+            # build_stargate,
+            # redistribute_workers,
             select_worker,
-            build_cybernetics_core,
-            build_gateway,
-            train_probe
+            build_barracks,
+            build_supply_depot,
+            train_marines,
+            # build_cybernetics_core,
+            # build_gateway,
+
         ]
 
     def get_actions(self, state, action):
@@ -38,14 +41,78 @@ class ActionManager:
             return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
 
 
-def build_pylon(obs, coords):
+
+
+
+def build_barracks(obs, coords):
+    mineral_count = obs.player[1]
+
+    if not mineral_count >= 150:
+        return []
+
+    return build_object(obs, coords, actions.FUNCTIONS.Build_Barracks_screen)
+
+def build_supply_depot(obs, coords):
     mineral_count = obs.player[1]
 
     if not mineral_count >= 100:
         return []
 
-    return build_object(obs, coords, actions.FUNCTIONS.Build_Pylon_screen)
+    return build_object(obs, coords, actions.FUNCTIONS.Build_SupplyDepot_screen)
 
+
+def train_marines(obs, coords):
+    mineral_count = obs.player[1]
+    boolean, coordinates = has_barracks(obs)
+
+    if mineral_count < 50:
+        return []
+
+    if not boolean:
+        return []
+
+    # Check if selecting a unit is available
+    if actions.FUNCTIONS.select_point.id not in obs.available_actions:
+        return []
+
+    # Add a select_point action to select the Barracks
+    actions_list = [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[0], coordinates])]
+
+    # Ensure Train_Marine_quick is available after selecting
+    # if actions.FUNCTIONS.Train_Marine_quick.id not in obs.available_actions:
+    #     return []
+
+    # Add the train marine action
+    actions_list.append(actions.FunctionCall(actions.FUNCTIONS.Train_Marine_quick.id, []))
+
+    return actions_list
+
+
+
+def redistribute_workers(obs, _):
+    """
+    Redistribute idle workers to mineral field in view
+    """
+    selected_unit = obs.single_select
+
+    if (selected_unit is None or selected_unit[0].unit_type != units.Protoss.Probe) and idle_workers_exist(obs):
+        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
+
+    minerals = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.MineralField),
+                    None)
+
+    queued = False
+    if selected_unit.any() and minerals.any() and (minerals.x >= 0 and minerals.y >= 0):
+        return [actions.FunctionCall(actions.FUNCTIONS.Smart_screen.id, [[queued], [minerals.x, minerals.y]])]
+
+    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+def is_worker_selected(obs):
+    """Check if a worker is selected."""
+    if len(obs.single_select) > 0 and obs.single_select[0].unit_type == units.Terran.SCV:
+        return True
+    if len(obs.multi_select) > 0 and obs.multi_select[0].unit_type == units.Terran.SCV:
+        return True
+    return False
 
 def build_assimilator(obs, _):
     mineral_count = obs.player[1]
@@ -59,8 +126,13 @@ def build_assimilator(obs, _):
         return build_object(obs, (geysers.x, geysers.y), actions.FUNCTIONS.Build_Assimilator_screen)
 
     return []
+def build_pylon(obs, coords):
+    mineral_count = obs.player[1]
 
+    if not mineral_count >= 100:
+        return []
 
+    return build_object(obs, coords, actions.FUNCTIONS.Build_Pylon_screen)
 def build_nexus(obs, _):
     mineral_count = obs.player[1]
     if mineral_count < 400:
@@ -80,9 +152,6 @@ def build_nexus(obs, _):
     )
 
     return build_object(obs, nexus_coords, actions.FUNCTIONS.Build_Nexus_screen)
-
-
-# TODO See why the build_probe function is always unavailable
 def train_probe(obs, _):
     action_list = []
     mineral_count = obs.player[1]
@@ -109,22 +178,11 @@ def train_probe(obs, _):
         print('it should be building a probe')
     return action_list
 
-
 def move_screen(obs, xy_coords):
     if actions.FUNCTIONS.move_camera.id in obs.available_actions:
         return [actions.FunctionCall(actions.FUNCTIONS.move_camera.id, [(xy_coords[0], xy_coords[1])])]
 
     return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
-
-
-def is_worker_selected(obs):
-    """Check if a worker is selected."""
-    if len(obs.single_select) > 0 and obs.single_select[0].unit_type == units.Protoss.Probe:
-        return True
-    if len(obs.multi_select) > 0 and obs.multi_select[0].unit_type == units.Protoss.Probe:
-        return True
-    return False
-
 def build_stargate(obs, xy_coords):
     mineral_count = obs.player[1]
     vespene_count = obs.player[2]
@@ -144,7 +202,6 @@ def build_stargate(obs, xy_coords):
 
 
     return []
-
 def build_cybernetics_core(obs, xy_coords):
     mineral_count = obs.player[1]
 
@@ -152,8 +209,6 @@ def build_cybernetics_core(obs, xy_coords):
         return []
 
     return build_object(obs, xy_coords, actions.FUNCTIONS.Build_CyberneticsCore_screen)
-
-
 def build_gateway(obs, xy_coords):
     mineral_count = obs.player[1]
 
@@ -165,23 +220,17 @@ def build_gateway(obs, xy_coords):
 
 
 
-def redistribute_workers(obs, _):
-    """
-    Redistribute idle workers to mineral field in view
-    """
-    selected_unit = obs.single_select
 
-    if (selected_unit is None or selected_unit[0].unit_type != units.Protoss.Probe) and idle_workers_exist(obs):
-        return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, ["select"])]
 
-    minerals = next((unit for unit in obs.feature_units if unit.unit_type == units.Neutral.MineralField),
-                    None)
 
-    queued = False
-    if selected_unit.any() and minerals.any() and (minerals.x >= 0 and minerals.y >= 0):
-        return [actions.FunctionCall(actions.FUNCTIONS.Smart_screen.id, [[queued], [minerals.x, minerals.y]])]
 
-    return [actions.FunctionCall(actions.FUNCTIONS.no_op.id, [])]
+
+
+
+
+
+
+
 
 
 def _xy_locs(mask):

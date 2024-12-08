@@ -10,13 +10,13 @@ from actions import *
 
 
 class PySC2GymWrapper(gym.Env):
-    def __init__(self, num_actions, map_name="Simple64", step_mul=8, visualize=False):
+    def __init__(self, num_actions, map_name="BuildMarines", step_mul=8, visualize=False):
         super(PySC2GymWrapper, self).__init__()
 
         self.sc2_env = sc2_env.SC2Env(
             map_name=map_name,
             players=[
-                sc2_env.Agent(sc2_env.Race.protoss),
+                sc2_env.Agent(sc2_env.Race.terran),
                 sc2_env.Bot(sc2_env.Race.zerg, sc2_env.Difficulty.easy)  # Second player (bot with race and difficulty)
             ],
             agent_interface_format=features.AgentInterfaceFormat(
