@@ -77,27 +77,34 @@ def validate_screen_coords(x, y, max_size=83):
     return x, y
 
 
-def select_worker(obs):
+def select_worker(obs, unit_type):
     if idle_workers_exist(obs):
         return [actions.FunctionCall(actions.FUNCTIONS.select_idle_worker.id, [[0]])]
 
     if actions.FUNCTIONS.select_point.id in obs.available_actions:
-        SCV = next((unit for unit in obs.feature_units if unit.unit_type == units.Terran.SCV), None)
+        worker = next((unit for unit in obs.feature_units if unit.unit_type == unit_type), None)
 
-        if SCV is not None and SCV.any() and SCV.x >= 0 and SCV.y >= 0:
+        if worker is not None and worker.any() and worker.x >= 0 and worker.y >= 0:
             queued = False
-            return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (SCV.x, SCV.y)])]
+            return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[queued], (worker.x, worker.y)])]
+
+    return []
+
+
+def build_object(obs, coords, function):
+    if (coords[0] >= 0 and coords[1] >= 0) and function.id in obs.available_actions:
+        return [actions.FunctionCall(function.id, [[False], coords])]
 
     return []
 
 
 # TODO Check if selected worker has build queue
-def build_object(obs, coords, function):
+def build_object_ensure_selected_worker(obs, coords, function):
     actions_list = []
     queued = False
 
     if not is_worker_selected(obs):
-        actions_list.append(select_worker(obs))
+        actions_list.append(select_worker(obs, None))
         queued = True
 
     if (coords[0] >= 0 and coords[1] >= 0) and (function.id in obs.available_actions or queued):
@@ -116,11 +123,13 @@ def get_camera_position_quadrant(obs):
 
     return x, y
 
+
 def get_pylons(obs):
     pylons = [unit for unit in obs.feature_units
               if unit.unit_type == units.Protoss.Pylon
               and unit.owner == obs.player[0]]
     return pylons
+
 
 def is_pylon_in_range(obs, pylons, xy_coords):
     return_value = False
@@ -131,11 +140,19 @@ def is_pylon_in_range(obs, pylons, xy_coords):
             break
     return return_value
 
-def has_barracks(obs):
+
+def get_obs_unit_coords(obs, unit_type):
     for unit in obs.feature_units:
-        if unit.unit_type == units.Terran.Barracks:
+        if unit.unit_type == unit_type:
+            return unit.x, unit.y
 
-            return True, (unit.x, unit.y)
 
-    return False, None
+def check_selected_unit_is_unit_type(obs, unit_type):
+    selected_unit_tags = obs.observation.single_select
 
+    if len(selected_unit_tags) > 0:
+        first_selected_unit = selected_unit_tags[0]
+
+        return first_selected_unit.unit_type == unit_type
+
+    return False
