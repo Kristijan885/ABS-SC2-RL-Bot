@@ -52,16 +52,16 @@ def build_supply_depot(obs, coords):
     return build_object(obs, coords, actions.FUNCTIONS.Build_SupplyDepot_screen)
 
 
-def select_barracks(obs, _):
-    coordinates = get_obs_unit_coords(obs, units.Terran.Barracks)
+def select_barracks(obs, coords):
+    # coordinates = get_obs_unit_coords(obs, units.Terran.Barracks)
 
-    if not coordinates:
-        return []
+    # if not coordinates:
+    #     return []
 
     if actions.FUNCTIONS.select_point.id not in obs.available_actions:
         return []
 
-    return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[0], coordinates])]
+    return [actions.FunctionCall(actions.FUNCTIONS.select_point.id, [[0], coords])]
 
 
 def train_marines(obs, _):
