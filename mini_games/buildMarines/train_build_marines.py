@@ -1,55 +1,74 @@
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3 import PPO
 from build_marines_actions import BuildMarinesActionManager
+from eval_random_agent import evaluate
 from sc2env import PySC2GymWrapper
-import numpy as np
-from absl import app
+from absl import app, flags
+import optuna
+import json
 
 
-def evaluate_random_agent(env, n_eval_episodes=10):
-    """Evaluate a random agent by sampling actions from the action space."""
-    total_rewards = []
+def objective(trial):
+    """Objective function for Optuna to optimize PPO hyperparameters."""
+    learning_rate = trial.suggest_float('learning_rate', 1e-5, 1e-2, log=True)
+    ent_coef = trial.suggest_float('ent_coef', 1e-8, 1e-2, log=True)
+    gamma = trial.suggest_float('gamma', 0.8, 0.9999)
+    n_steps = trial.suggest_int('n_steps', 128, 2048, step=128)
 
-    for episode in range(n_eval_episodes):
-        _ = env.reset()
-        done = False
-        episode_reward = 0
+    env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager())
+    model = PPO(
+        'MlpPolicy',
+        env,
+        verbose=1,
+        learning_rate=learning_rate,
+        gamma=gamma,
+        ent_coef=ent_coef,
+        n_steps=n_steps,
+    )
 
-        while not done:
-            # Sample a random action from the environment's action space
-            action = env.action_space.sample()
-            obs, reward, done, _, _ = env.step(action)
-            episode_reward += reward
+    model.learn(total_timesteps=144000)
 
-        total_rewards.append(episode_reward)
+    mean_reward, _ = evaluate_policy(
+        model,
+        env,
+        n_eval_episodes=5,
+        deterministic=True,
+    )
 
-    mean_reward = np.mean(total_rewards)
-    std_reward = np.std(total_rewards)
-    return mean_reward, std_reward
+    env.close()
+
+    return mean_reward
 
 
 def main(_):
-    # eval_env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), visualize=False)
-    #
-    # print("Evaluating random actions agent...")
-    # mean_reward_random, std_reward_random = evaluate_random_agent(eval_env, n_eval_episodes=10)
-    # print(f"Random agent: mean_reward={mean_reward_random:.2f} +/- {std_reward_random:.2f}")
-    #
-    # eval_env.close()
+    if flags.FLAGS.eval_random:
+        evaluate()
 
+    study = optuna.create_study(direction='maximize', study_name='ABS-SC2-BuildMarines')
+    study.optimize(objective, n_trials=10)
+
+    print("\nBest Hyperparameters:")
+    print(study.best_params)
+    with open("optuna_study.json", "w") as f:
+        json.dump(study.trials_dataframe().to_dict(orient="list"), f)
+
+    best_params = study.best_params
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager())
-    model = PPO('MlpPolicy', env, verbose=1)
+    model = PPO(
+        'MlpPolicy',
+        env,
+        verbose=1,
+        learning_rate=best_params['learning_rate'],
+        gamma=best_params['gamma'],
+        ent_coef=best_params['ent_coef'],
+        n_steps=best_params['n_steps'],
+    )
 
-    model_path = './models/buildMarines.zip'
-    model.load(model_path, env)
-
-    print("Training the PPO model...")
-    model.learn(total_timesteps=10000)
-
+    model_path = './models/buildMarines_optuna.zip'
+    # One episode is 14400 steps
+    model.learn(total_timesteps=1440000)
     model.save(model_path)
     print(f"Model saved to {model_path}")
-
-    print("Evaluating trained model...")
 
     mean_reward_trained, std_reward_trained = evaluate_policy(
         model,
@@ -57,17 +76,12 @@ def main(_):
         n_eval_episodes=10,
         deterministic=True,
     )
-
-    # mean_reward_trained, std_reward_trained = evaluate_trained_model(env, model, n_eval_episodes=10)
-    print(f"Trained agent: mean_reward={mean_reward_trained:.2f} +/- {std_reward_trained:.2f}")
-
-    print("\nComparison:")
-    # print(f"Random agent: mean_reward={mean_reward_random:.2f} +/- {std_reward_random:.2f}")
-    print(f"Trained agent: mean_reward={mean_reward_trained:.2f} +/- {std_reward_trained:.2f}")
+    print(f"Trained agent (optimized): mean_reward={mean_reward_trained:.2f} +/- {std_reward_trained:.2f}")
 
     env.close()
 
 
-# Ensure that the script runs through absl.app to parse FLAGS
 if __name__ == '__main__':
+    flags.DEFINE_boolean('eval_random', False, 'Whether or not to evaluate a random action agent first')
+
     app.run(main)
