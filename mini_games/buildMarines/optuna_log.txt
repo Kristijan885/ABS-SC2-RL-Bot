@@ -1,0 +1,1525 @@
+D:\PyCharmProjects\venv\Scripts\python.exe D:\ABS-SC2-RL-Bot\mini_games\buildMarines\train_build_marines.py 
+2024-12-14 12:33:57.551996: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-14 12:34:04.239403: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[I 2024-12-14 12:34:26,340] A new study created in memory with name: ABS-SC2-BuildMarines
+I1214 12:34:26.394128  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 60203 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-4gtai6ls\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 12:34:26.625473  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:60203/sc2api, attempt: 0, running: True
+I1214 12:34:29.646758  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:60203/sc2api, attempt: 1, running: True
+I1214 12:34:32.690851  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:60203/sc2api, attempt: 2, running: True
+I1214 12:34:35.752516  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:60203/sc2api, attempt: 3, running: True
+I1214 12:34:51.435534  5144 sc2_env.py:288] Environment is ready
+I1214 12:34:57.128309  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 12:35:50.535351  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 12:35:54.114313  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 12:36:44.890808  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:36:48.194539  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 12:37:48.975853  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 12:37:52.275980  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 12:38:40.769132  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 12:38:44.134235  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 12:39:41.628366  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 12:39:44.986064  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 12:40:34.186788  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:40:37.542385  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 12:41:25.425523  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 12:41:28.873043  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 12:42:25.274401  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:42:28.652649  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 12:43:15.245812  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 12:43:18.588952  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 12:44:16.179915  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 12:44:19.608730  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 12:45:06.150205  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:45:09.496172  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 12:45:56.285848  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 12:45:59.667222  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 12:46:56.183351  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 12:46:59.527057  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 12:47:45.193662  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 12:47:48.559046  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 12:48:43.750812  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 12:48:47.093600  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 12:49:31.558967  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:49:34.923413  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 12:50:20.644572  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:50:23.990182  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 12:51:18.278193  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:51:21.628800  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 12:52:05.088883  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:52:08.465926  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 12:53:01.765232  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:53:05.105406  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 12:53:48.779830  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 12:53:52.135935  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 12:54:34.122159  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 12:54:37.479625  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 12:55:30.131487  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 12:55:33.480779  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 12:56:14.827154  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 12:56:18.227273  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 12:57:10.755127  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 12:57:14.138091  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 12:57:56.392420  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:57:59.744925  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 12:58:40.567505  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:58:43.940852  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 12:59:35.825452  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 12:59:39.189170  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 13:00:21.777014  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 13:00:25.168941  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 13:01:17.150223  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:01:20.520255  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 13:02:02.616422  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:02:05.994164  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 13:02:49.026304  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 13:02:52.394188  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 13:03:44.663952  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 13:03:48.025199  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 13:04:33.280336  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 13:04:36.638442  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 13:05:29.833940  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:05:33.181625  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 13:06:15.625223  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:06:18.977751  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 13:07:12.324862  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 13:07:15.675246  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 13:07:59.681406  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 13:08:03.077618  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 13:08:47.570778  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:08:51.587054  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 13:09:45.459487  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 13:09:48.774616  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 13:10:31.352065  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:10:34.679358  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 13:11:26.025029  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:11:29.345904  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 13:12:12.175169  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:12:15.519917  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 13:12:58.519622  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:13:01.878878  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 13:13:49.330826  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:13:52.659807  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 13:14:33.983758  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:14:37.305978  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 13:15:29.514425  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:15:32.907370  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 13:16:13.325734  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:16:16.734824  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 13:16:58.924829  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:17:02.289315  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 13:17:50.383080  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:17:53.724589  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 13:18:31.601195  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:18:34.982824  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 13:19:22.351073  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:19:25.710888  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 13:20:04.163993  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:20:07.506519  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 13:20:45.085776  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:20:48.428303  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 13:21:37.600482  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:21:40.917428  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 13:22:19.975904  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:22:23.331790  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 13:23:13.853328  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:23:17.281416  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 13:24:00.122016  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:24:03.459885  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 13:24:44.946876  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 13:24:48.262701  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 13:25:35.989681  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:25:39.435296  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 13:26:19.568618  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:26:22.919550  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 13:27:11.891969  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:27:15.252876  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 13:27:53.932325  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:27:57.270166  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 13:28:35.661572  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:28:39.042249  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+D:\PyCharmProjects\venv\Lib\site-packages\stable_baselines3\common\evaluation.py:67: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+I1214 13:28:52.485323  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 13:29:18.622625  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:29:21.943004  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 13:29:47.885514  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:29:51.229382  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 13:30:16.902732  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:30:20.246680  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 13:30:46.139641  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:30:49.514343  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 13:31:15.736139  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:31:19.256264  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+D:\PyCharmProjects\venv\Lib\site-packages\stable_baselines3\common\save_util.py:284: UserWarning: Path 'models' does not exist. Will create it.
+  warnings.warn(f"Path '{path.parent}' does not exist. Will create it.")
+Model with mean reward 0.0 saved to ./models/trial_0.zip
+I1214 13:31:19.805526  5144 sc2_env.py:740] Environment Close
+I1214 13:31:19.907241  5144 sc_process.py:227] Shutdown gracefully.
+I1214 13:31:19.907241  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 13:31:19.908238  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 13:31:19,925] Trial 0 finished with value: 0.0 and parameters: {'learning_rate': 0.0030162931251012746, 'ent_coef': 8.453647373914482e-06, 'gamma': 0.9232610456089543, 'n_steps': 1280}. Best is trial 0 with value: 0.0.
+I1214 13:31:19.957108  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 61763 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-_agittlo\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 13:31:20.027498  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:61763/sc2api, attempt: 0, running: True
+I1214 13:31:23.053910  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:61763/sc2api, attempt: 1, running: True
+I1214 13:31:26.082300  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:61763/sc2api, attempt: 2, running: True
+I1214 13:31:29.118240  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:61763/sc2api, attempt: 3, running: True
+I1214 13:31:35.737694  5144 sc2_env.py:288] Environment is ready
+I1214 13:31:35.884480  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 13:32:26.175482  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 13:32:29.658636  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 13:33:23.074124  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 13:33:26.453561  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 13:34:19.674082  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 13:34:23.059182  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 13:35:15.013913  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 13:35:18.388136  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 13:36:13.176028  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [26]
+I1214 13:36:16.550210  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 13:37:12.933925  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [48]
+I1214 13:37:16.283060  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 13:38:06.592800  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [19]
+I1214 13:38:09.955931  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 13:39:06.773511  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [44]
+I1214 13:39:10.118619  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 13:40:02.378700  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [16]
+I1214 13:40:05.826519  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 13:40:54.391388  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [31]
+I1214 13:40:57.754623  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 13:41:53.094220  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [58]
+I1214 13:41:56.463450  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 13:42:48.003055  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [26]
+I1214 13:42:51.363477  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 13:43:34.699150  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:43:38.112846  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 13:44:25.307123  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [1], score: [18]
+I1214 13:44:28.798990  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 13:45:16.170791  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 13:45:19.535900  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 13:46:04.930732  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [12]
+I1214 13:46:08.299173  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 13:46:54.474220  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:46:57.836936  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 13:47:45.291592  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 13:47:48.688762  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 13:48:33.242135  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:48:36.624673  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 13:49:19.479476  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 13:49:22.882410  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 13:50:09.049102  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 13:50:12.413515  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 13:50:56.351184  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 13:50:59.738521  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 13:51:45.317218  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:51:48.685082  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 13:52:43.031042  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [27]
+I1214 13:52:46.400899  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 13:53:41.655670  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [35]
+I1214 13:53:45.017298  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 13:54:36.753450  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [27]
+I1214 13:54:40.113574  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 13:55:32.196481  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:55:35.576252  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 13:56:26.140389  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:56:29.614855  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 13:57:17.581341  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [19]
+I1214 13:57:20.945974  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 13:58:07.758196  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:58:11.113442  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 13:59:00.252224  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:59:03.590278  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 13:59:48.553208  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 13:59:51.918117  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 14:00:38.742075  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 14:00:42.101151  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 14:01:25.642100  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:01:29.003058  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 14:02:12.445680  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:02:15.821716  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 14:02:57.635374  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 14:03:01.005588  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 14:03:44.015630  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:03:47.355582  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 14:04:30.752261  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:04:34.150563  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 14:05:14.545394  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:05:17.897993  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 14:06:02.029098  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:06:05.411340  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 14:06:51.605097  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 14:06:54.982492  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 14:07:36.658845  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 14:07:39.965996  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 14:08:23.842839  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:08:27.210875  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 14:09:11.102529  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:09:14.488845  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 14:09:56.811110  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 14:10:00.147784  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 14:10:44.089584  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:10:47.468469  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 14:11:31.037720  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:11:34.368347  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 14:12:15.157495  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:12:18.504160  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 14:13:02.246051  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:13:05.654403  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 14:13:49.997286  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:13:53.367445  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 14:14:37.924212  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:14:41.252231  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 14:15:22.826706  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:15:26.188850  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 14:16:11.139852  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:16:14.475782  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 14:16:58.845740  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:17:02.309806  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 14:17:43.986715  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:17:47.355629  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 14:18:32.593262  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 14:18:35.936830  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 14:19:19.621480  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:19:22.999979  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 14:20:03.810184  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:20:07.295614  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 14:20:50.850024  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:20:54.205584  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 14:21:38.352335  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 14:21:41.708980  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 14:22:22.494938  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:22:25.863531  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 14:23:09.362951  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:23:12.896980  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 14:23:56.557721  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:23:59.877960  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 14:24:40.544801  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:24:43.899544  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 14:24:50.468912  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 14:25:16.946690  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:25:20.305591  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 14:25:46.794785  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:25:50.176217  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 14:26:16.266356  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:26:19.645397  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 14:26:46.051461  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:26:49.413685  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 14:27:15.708601  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:27:19.192356  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+Model with mean reward 0.0 saved to ./models/trial_1.zip
+I1214 14:27:19.530719  5144 sc2_env.py:740] Environment Close
+I1214 14:27:19.632419  5144 sc_process.py:227] Shutdown gracefully.
+I1214 14:27:19.632419  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 14:27:19.632419  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 14:27:19,643] Trial 1 finished with value: 0.0 and parameters: {'learning_rate': 0.0012713082586777113, 'ent_coef': 2.9220737576754697e-06, 'gamma': 0.9423495018685071, 'n_steps': 384}. Best is trial 0 with value: 0.0.
+I1214 14:27:19.646382  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 63219 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-zdrvrghc\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 14:27:19.652367  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:63219/sc2api, attempt: 0, running: True
+I1214 14:27:22.684759  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:63219/sc2api, attempt: 1, running: True
+I1214 14:27:25.719165  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:63219/sc2api, attempt: 2, running: True
+I1214 14:27:31.734346  5144 sc2_env.py:288] Environment is ready
+I1214 14:27:31.869520  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 14:28:24.700550  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 14:28:28.141308  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 14:29:19.432383  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 14:29:22.898191  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 14:30:14.519873  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 14:30:17.935081  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 14:31:12.558882  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 14:31:16.027731  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 14:32:07.802130  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 14:32:11.147770  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 14:33:01.799749  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 14:33:05.151646  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 14:33:51.901461  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:33:55.290114  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 14:34:42.496190  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:34:45.910469  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 14:35:29.530129  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:35:33.001198  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 14:36:16.334270  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:36:19.700349  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 14:37:05.390217  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:37:08.757047  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 14:37:53.109008  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:37:56.459915  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 14:38:41.599831  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:38:44.921981  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 14:39:35.745749  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:39:39.216714  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 14:40:29.144781  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:40:32.473813  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 14:41:18.369441  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:41:21.684326  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 14:42:05.475540  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:42:08.852717  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 14:42:52.607274  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:42:55.939458  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 14:43:39.159312  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:43:42.482371  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 14:44:26.185087  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:44:29.504374  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 14:45:13.047946  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:45:16.364053  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 14:46:00.014952  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:46:03.424319  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 14:46:47.745734  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:46:51.080849  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 14:47:36.603024  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:47:39.954795  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 14:48:24.197528  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:48:27.551482  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 14:49:14.226526  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:49:17.553698  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 14:50:04.935284  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:50:08.264971  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 14:50:56.638235  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:50:59.930334  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 14:51:47.985206  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:51:51.331328  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 14:52:36.912367  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:52:40.222043  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 14:53:24.227177  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:53:27.567252  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 14:54:11.468868  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:54:14.807941  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 14:55:00.316972  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:55:03.681061  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 14:55:47.178704  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:55:50.526752  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 14:56:33.999665  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:56:37.382729  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 14:57:21.761382  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:57:25.106677  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 14:58:08.633384  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:58:12.000397  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 14:58:57.468391  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:59:00.801280  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 14:59:46.256037  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 14:59:49.619153  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 15:00:35.282944  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:00:38.611132  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 15:01:22.334835  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:01:25.720867  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 15:02:09.282781  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:02:12.660682  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 15:02:56.539454  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:02:59.884715  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 15:03:43.759516  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:03:47.105158  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 15:04:31.062616  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:04:34.428635  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 15:05:18.280652  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:05:21.609354  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 15:06:05.395331  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:06:08.730468  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 15:06:51.749966  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:06:55.062340  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 15:07:38.535642  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:07:41.908108  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 15:08:24.891681  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:08:28.263675  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 15:09:12.058844  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:09:15.436751  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 15:09:58.401951  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:10:01.752261  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 15:10:45.047687  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:10:48.500975  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 15:11:31.984841  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:11:35.317431  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 15:12:19.545158  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:12:22.883662  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 15:13:09.288593  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:13:12.623482  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 15:13:59.170218  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:14:02.542419  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 15:14:48.111158  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:14:51.492058  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 15:15:37.168448  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:15:40.562418  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 15:16:27.463860  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:16:30.768211  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 15:17:18.462429  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:17:21.744091  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 15:18:08.360014  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:18:11.709591  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 15:18:57.295874  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:19:00.639710  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 15:19:44.065742  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:19:47.382574  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 15:19:52.894499  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 15:20:18.758412  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:20:22.095727  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 15:20:47.760475  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:20:51.109523  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 15:21:17.263499  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:21:20.627655  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 15:21:46.375370  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:21:49.768217  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 15:22:15.605141  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:22:18.939995  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+Model with mean reward 0.0 saved to ./models/trial_2.zip
+I1214 15:22:19.297797  5144 sc2_env.py:740] Environment Close
+I1214 15:22:19.399132  5144 sc_process.py:227] Shutdown gracefully.
+I1214 15:22:19.399132  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 15:22:19.399132  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 15:22:19,407] Trial 2 finished with value: 0.0 and parameters: {'learning_rate': 0.0017184153679065525, 'ent_coef': 1.54829162089269e-07, 'gamma': 0.9915186413664112, 'n_steps': 256}. Best is trial 0 with value: 0.0.
+I1214 15:22:19.418006  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 64210 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-awp7za9u\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 15:22:19.423506  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:64210/sc2api, attempt: 0, running: True
+I1214 15:22:22.478329  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:64210/sc2api, attempt: 1, running: True
+I1214 15:22:25.517698  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:64210/sc2api, attempt: 2, running: True
+I1214 15:22:32.761978  5144 sc2_env.py:288] Environment is ready
+I1214 15:22:32.902576  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 15:23:25.389277  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:23:28.878793  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 15:24:20.925201  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 15:24:24.284912  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 15:25:16.911529  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:25:20.283091  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 15:26:11.300400  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:26:14.650125  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 15:27:08.716275  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 15:27:12.014844  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 15:28:04.675942  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:28:08.038865  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 15:29:02.508661  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:29:06.034193  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 15:30:03.942064  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:30:07.404287  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 15:31:02.711038  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:31:06.175919  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 15:31:59.526335  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:32:03.024783  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 15:32:55.130750  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:32:58.483181  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 15:33:52.727502  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 15:33:56.076845  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 15:34:48.140377  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:34:51.495316  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 15:35:44.316373  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:35:47.809896  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 15:36:40.206042  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:36:43.546279  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 15:37:36.244738  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:37:39.605601  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 15:38:32.302178  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 15:38:35.675421  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 15:39:28.135949  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:39:31.498996  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 15:40:24.423644  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 15:40:27.779643  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 15:41:20.316205  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [13]
+I1214 15:41:23.659988  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 15:42:14.825635  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:42:18.272320  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 15:43:10.096440  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:43:13.462113  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 15:44:06.598518  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 15:44:09.945879  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 15:45:02.674628  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:45:06.033665  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 15:46:00.041004  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 15:46:03.576454  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 15:47:07.695362  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:47:11.476260  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 15:48:05.270096  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 15:48:08.640373  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 15:49:00.943964  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 15:49:04.310436  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 15:49:57.603038  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:50:01.238013  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 15:50:57.577129  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 15:51:00.979468  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 15:51:52.961365  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:51:56.337119  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 15:52:48.393842  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:52:51.732232  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 15:53:43.558595  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:53:46.916344  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 15:54:39.366086  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:54:42.778143  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 15:55:35.116340  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:55:38.542063  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 15:56:31.102276  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 15:56:34.483268  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 15:57:27.201022  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 15:57:30.570684  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 15:58:23.743513  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 15:58:27.091110  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 15:59:19.075392  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 15:59:22.446861  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 16:00:14.103663  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:00:17.488008  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 16:01:09.657096  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:01:13.014212  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 16:02:05.947856  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:02:09.527264  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 16:03:01.391272  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:03:04.780014  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 16:03:57.015846  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:04:00.403357  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 16:04:51.971529  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:04:55.439508  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 16:05:47.660993  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:05:51.045205  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 16:06:43.234776  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:06:46.605210  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 16:07:39.204651  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:07:42.585269  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 16:08:34.208268  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:08:37.565976  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 16:09:29.490282  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:09:32.876859  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 16:10:24.618922  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:10:27.995373  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 16:11:19.229491  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:11:22.636162  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 16:12:13.859125  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:12:17.223088  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 16:13:09.669706  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:13:13.042207  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 16:14:04.421273  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:14:07.765684  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 16:14:59.763440  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:15:03.147706  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 16:15:56.457077  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:15:59.827456  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 16:16:50.315119  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:16:53.684173  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 16:17:45.318632  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:17:48.690659  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 16:18:42.536115  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 16:18:45.905766  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 16:19:38.173276  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:19:41.516318  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 16:20:32.117848  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:20:35.479121  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 16:21:26.808547  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:21:30.168456  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 16:22:21.484432  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:22:24.917243  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 16:22:42.310915  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 16:23:08.043917  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:23:11.423104  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 16:23:37.178541  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:23:40.551250  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 16:24:05.715737  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:24:09.098133  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 16:24:34.541095  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:24:37.875286  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 16:25:03.355855  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:25:06.748076  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+I1214 16:25:07.082214  5144 sc2_env.py:740] Environment Close
+Model with mean reward 0.0 saved to ./models/trial_3.zip
+I1214 16:25:07.183941  5144 sc_process.py:227] Shutdown gracefully.
+I1214 16:25:07.183941  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 16:25:07.183941  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 16:25:07,195] Trial 3 finished with value: 0.0 and parameters: {'learning_rate': 0.002234486572287702, 'ent_coef': 0.0041110691662814775, 'gamma': 0.9779359600650621, 'n_steps': 896}. Best is trial 0 with value: 0.0.
+I1214 16:25:07.199900  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 49533 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-ch4gshga\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 16:25:07.204886  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:49533/sc2api, attempt: 0, running: True
+I1214 16:25:10.248363  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:49533/sc2api, attempt: 1, running: True
+I1214 16:25:13.278828  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:49533/sc2api, attempt: 2, running: True
+I1214 16:25:19.271425  5144 sc2_env.py:288] Environment is ready
+I1214 16:25:19.423482  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 16:25:59.935932  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:26:03.411384  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 16:26:57.584206  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:27:00.945966  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 16:27:53.943802  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 16:27:57.285041  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 16:28:49.906723  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:28:53.291716  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 16:29:46.480521  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:29:49.883542  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 16:30:42.719799  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:30:46.106825  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 16:31:39.088742  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 16:31:42.465644  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 16:32:35.720420  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:32:39.168387  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 16:33:32.452312  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:33:35.828932  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 16:34:29.632204  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [13]
+I1214 16:34:33.027117  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 16:35:27.067898  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 16:35:30.445793  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 16:36:23.043612  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:36:26.381700  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 16:37:19.076685  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:37:22.411613  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 16:38:17.303316  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [12]
+I1214 16:38:20.676083  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 16:39:13.555623  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 16:39:16.946794  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 16:39:56.289247  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:39:59.771067  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 16:40:52.675358  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:40:56.056407  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 16:41:49.412154  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:41:52.789927  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 16:42:44.649144  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:42:48.046041  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 16:43:40.815805  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:43:44.183953  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 16:44:37.617818  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:44:40.994782  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 16:45:33.527563  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:45:36.921439  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 16:46:29.443676  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 16:46:32.825323  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 16:47:25.465208  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:47:28.838379  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 16:48:22.588241  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:48:25.964569  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 16:49:18.347872  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:49:21.708921  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 16:50:14.666891  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 16:50:18.021177  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 16:51:10.091244  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 16:51:13.484171  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 16:52:05.849818  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:52:09.227711  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 16:53:01.861469  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:53:05.245588  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 16:53:58.636682  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 16:54:01.982738  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 16:54:41.690488  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:54:45.082466  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 16:55:39.508364  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:55:42.928344  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 16:56:36.874404  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 16:56:40.240168  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 16:57:33.609896  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:57:36.966461  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 16:58:30.652692  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 16:58:34.020003  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 16:59:28.011780  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 16:59:31.360675  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 17:00:23.279555  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:00:26.670496  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 17:01:20.241286  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 17:01:23.621495  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 17:02:18.225481  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 17:02:21.619276  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 17:03:14.938278  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:03:18.305692  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 17:04:11.312996  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:04:14.655157  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 17:05:07.126785  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:05:10.494542  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 17:06:03.212834  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:06:06.635798  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 17:06:59.012978  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:07:02.382758  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 17:07:55.682654  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:07:59.058009  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 17:08:50.974704  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:08:54.338561  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 17:09:33.365256  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:09:36.741664  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 17:10:30.707425  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:10:34.168290  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 17:11:27.279848  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:11:30.640945  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 17:12:24.359131  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:12:27.690180  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 17:13:22.260332  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:13:25.571565  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 17:14:19.306562  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:14:22.637863  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 17:15:16.007731  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:15:19.388787  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 17:16:13.163517  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:16:16.572568  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 17:17:10.202282  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:17:13.522375  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 17:18:06.986536  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:18:10.354976  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 17:19:04.925182  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:19:08.311133  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 17:20:02.312181  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:20:05.689248  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 17:20:58.849225  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:21:02.225236  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 17:21:54.239823  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:21:57.641118  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 17:22:51.148564  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:22:54.532614  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 17:23:48.666466  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:23:52.035492  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 17:24:30.983456  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:24:34.359956  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 17:24:51.847446  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 17:25:20.012330  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:25:23.447754  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 17:25:51.123480  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:25:54.480339  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 17:26:22.729086  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:26:26.118263  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 17:26:54.289502  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:26:57.652239  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 17:27:26.098194  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:27:29.431128  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+Model with mean reward 0.0 saved to ./models/trial_4.zip
+I1214 17:27:29.794061  5144 sc2_env.py:740] Environment Close
+I1214 17:27:29.895084  5144 sc_process.py:227] Shutdown gracefully.
+I1214 17:27:29.895084  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 17:27:29.895606  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 17:27:29,916] Trial 4 finished with value: 0.0 and parameters: {'learning_rate': 0.00012081736356763586, 'ent_coef': 1.3343394699008913e-07, 'gamma': 0.9077375048578293, 'n_steps': 1920}. Best is trial 0 with value: 0.0.
+I1214 17:27:29.919806  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 51183 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-vzi0s1j3\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 17:27:29.923792  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:51183/sc2api, attempt: 0, running: True
+I1214 17:27:32.948404  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:51183/sc2api, attempt: 1, running: True
+I1214 17:27:35.981636  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:51183/sc2api, attempt: 2, running: True
+I1214 17:27:41.937822  5144 sc2_env.py:288] Environment is ready
+I1214 17:27:42.090392  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 17:28:22.222294  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:28:25.663833  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 17:29:20.083846  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 17:29:23.433097  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 17:30:17.049701  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:30:20.346631  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 17:31:13.622819  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 17:31:16.986487  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 17:32:12.045565  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:32:15.526032  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 17:33:09.586612  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:33:12.928007  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 17:34:06.758573  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 17:34:10.093972  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 17:35:02.938974  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:35:06.296089  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 17:35:46.485204  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:35:49.807913  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 17:36:44.585888  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:36:47.954863  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 17:37:41.040349  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 17:37:44.348775  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 17:38:38.652807  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:38:41.969991  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 17:39:36.752897  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 17:39:40.122730  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 17:40:34.724667  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:40:38.076956  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 17:41:34.199510  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:41:37.599517  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 17:42:31.431640  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:42:34.817076  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 17:43:13.334597  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:43:16.671895  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 17:44:10.547159  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:44:13.908059  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 17:45:07.529790  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:45:10.873426  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 17:46:05.332002  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:46:08.674039  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 17:47:02.954086  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:47:06.320830  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 17:47:59.977634  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:48:03.349596  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 17:48:57.576800  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:49:00.910703  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 17:49:55.357952  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:49:58.701089  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 17:50:38.836721  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:50:42.167638  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 17:51:36.343867  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 17:51:39.680037  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 17:52:34.486813  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:52:37.843694  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 17:53:32.612666  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:53:35.936456  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 17:54:29.886070  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 17:54:33.217120  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 17:55:28.772221  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 17:55:32.143656  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 17:56:25.787739  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:56:29.126199  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 17:57:23.106617  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 17:57:26.470478  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 17:58:21.051196  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 17:58:24.441404  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 17:59:03.118362  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 17:59:06.493713  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 18:00:00.897050  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 18:00:04.208395  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 18:00:59.043685  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 18:01:02.541579  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 18:01:53.586227  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:01:56.939557  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 18:02:51.141054  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:02:54.455053  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 18:03:49.180586  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:03:52.548651  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 18:04:46.918792  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:04:50.325791  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 18:05:44.301462  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:05:47.684642  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 18:06:28.087664  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 18:06:31.392940  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 18:07:25.351239  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 18:07:28.737760  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 18:08:23.374054  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [14]
+I1214 18:08:26.700117  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 18:09:20.399741  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:09:23.756261  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 18:10:19.427184  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 18:10:22.779395  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 18:11:15.472789  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:11:18.842665  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 18:12:13.838613  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 18:12:17.212355  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 18:13:11.414313  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 18:13:14.753894  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 18:13:54.678102  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [16]
+I1214 18:13:58.008936  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 18:14:51.775059  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 18:14:55.095642  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 18:15:48.759214  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 18:15:52.154706  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 18:16:48.078084  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [14]
+I1214 18:16:51.900750  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 18:17:47.451513  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [1], score: [9]
+I1214 18:17:50.846695  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 18:18:44.956740  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 18:18:48.327371  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 18:19:43.205749  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [13]
+I1214 18:19:46.547887  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 18:20:42.503303  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [12]
+I1214 18:20:45.866734  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 18:21:25.877972  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [17]
+I1214 18:21:29.216406  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 18:22:23.414997  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 18:22:26.791918  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 18:23:21.831875  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [21]
+I1214 18:23:25.131687  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 18:24:19.038703  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [15]
+I1214 18:24:22.385129  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 18:25:18.863216  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [12]
+I1214 18:25:22.337454  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 18:26:17.280030  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 18:26:20.642868  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 18:27:15.465805  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [20]
+I1214 18:27:18.985435  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 18:28:09.598199  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 18:28:35.769367  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:28:39.105809  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 18:29:05.255798  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:29:08.598678  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 18:29:34.909353  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:29:38.243999  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 18:30:05.051062  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:30:08.426187  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 18:30:34.700286  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:30:38.084208  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+Model with mean reward 0.0 saved to ./models/trial_5.zip
+I1214 18:30:38.422456  5144 sc2_env.py:740] Environment Close
+I1214 18:30:38.524067  5144 sc_process.py:227] Shutdown gracefully.
+I1214 18:30:38.524067  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 18:30:38.524067  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 18:30:38,563] Trial 5 finished with value: 0.0 and parameters: {'learning_rate': 0.0005496428747459818, 'ent_coef': 2.362539230839133e-05, 'gamma': 0.9105691686106232, 'n_steps': 2048}. Best is trial 0 with value: 0.0.
+I1214 18:30:38.566952  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 52836 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-_rs6q4ni\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 18:30:38.571939  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:52836/sc2api, attempt: 0, running: True
+I1214 18:30:41.603862  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:52836/sc2api, attempt: 1, running: True
+I1214 18:30:44.635221  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:52836/sc2api, attempt: 2, running: True
+I1214 18:30:50.976001  5144 sc2_env.py:288] Environment is ready
+I1214 18:30:51.112284  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 18:31:42.672135  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 18:31:46.133317  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 18:32:37.252050  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:32:40.633812  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 18:33:32.435607  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 18:33:35.780871  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 18:34:27.423900  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:34:30.787613  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 18:35:21.713809  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:35:25.092800  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 18:36:16.483624  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:36:19.795241  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 18:37:10.983428  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:37:14.353080  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 18:38:04.499828  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 18:38:07.856541  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 18:38:58.955248  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:39:02.375401  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 18:39:52.886124  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:39:56.235195  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 18:40:47.352976  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:40:50.725256  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 18:41:42.043779  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:41:45.329020  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 18:42:49.271774  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:42:52.659827  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 18:43:45.198376  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:43:48.583733  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 18:44:40.627434  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:44:43.973602  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 18:45:36.121973  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:45:39.519148  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 18:46:32.723264  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 18:46:36.054310  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 18:47:28.649813  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 18:47:32.033249  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 18:48:23.765090  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:48:27.116042  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 18:49:19.783900  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 18:49:23.121980  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 18:50:14.844545  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:50:18.192484  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 18:51:09.811180  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 18:51:13.145365  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 18:52:04.724591  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:52:08.052652  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 18:53:00.166367  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:53:03.485484  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 18:54:07.170224  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:54:10.539951  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 18:55:01.424171  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 18:55:04.759922  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 18:55:57.003795  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 18:56:00.347735  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 18:56:54.186222  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 18:56:57.566031  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 18:57:48.659584  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 18:57:52.026681  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 18:58:43.856374  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 18:58:47.225302  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 18:59:38.758595  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 18:59:42.126109  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 19:00:36.308971  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 19:00:39.808458  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 19:01:32.777288  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 19:01:36.167396  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 19:02:27.526155  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:02:30.871976  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 19:03:21.378791  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 19:03:24.757867  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 19:04:16.313851  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:04:19.720990  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 19:05:23.846762  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 19:05:27.174462  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 19:06:20.288535  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 19:06:23.614588  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 19:07:15.032191  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 19:07:18.419636  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 19:08:11.725404  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [14]
+I1214 19:08:15.076510  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 19:09:07.708301  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 19:09:11.070667  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 19:10:02.356042  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 19:10:05.762295  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 19:10:57.937151  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 19:11:01.356729  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 19:11:54.151869  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [13]
+I1214 19:11:57.489078  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 19:12:49.754479  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 19:12:53.222910  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 19:13:45.246740  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:13:48.633344  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 19:14:40.760127  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 19:14:44.152162  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 19:15:36.615463  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:15:40.004668  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 19:16:44.309869  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:16:47.670394  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 19:17:39.454771  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:17:42.776733  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 19:18:33.939083  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:18:37.372760  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 19:19:28.044968  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 19:19:31.444665  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 19:20:23.655850  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:20:27.086716  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 19:21:19.627755  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:21:23.028561  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 19:22:15.942607  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:22:19.331696  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 19:23:11.827466  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 19:23:15.344101  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 19:24:07.645221  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 19:24:11.079504  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 19:25:04.406739  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 19:25:07.744950  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 19:26:01.687783  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [23]
+I1214 19:26:05.085238  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 19:26:57.456047  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 19:27:00.786063  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 19:27:51.027464  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 19:27:54.404003  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 19:28:59.819364  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 19:29:03.217588  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 19:29:54.849601  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 19:29:58.242282  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 19:30:51.419509  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [21]
+I1214 19:30:54.855415  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 19:31:38.155179  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 19:32:03.933420  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:32:07.287445  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 19:32:33.071151  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:32:36.480417  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 19:33:06.931180  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:33:10.463258  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 19:33:38.120686  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:33:41.479319  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 19:34:06.963088  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:34:11.324488  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+Model with mean reward 0.0 saved to ./models/trial_6.zip
+I1214 19:34:11.664075  5144 sc2_env.py:740] Environment Close
+I1214 19:34:11.766098  5144 sc_process.py:227] Shutdown gracefully.
+I1214 19:34:11.766098  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 19:34:11.766098  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 19:34:11,796] Trial 6 finished with value: 0.0 and parameters: {'learning_rate': 6.890699631036896e-05, 'ent_coef': 1.5113757846561296e-06, 'gamma': 0.8799448560277181, 'n_steps': 1664}. Best is trial 0 with value: 0.0.
+I1214 19:34:11.799754  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 54571 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-h6jfm4ts\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 19:34:11.803735  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:54571/sc2api, attempt: 0, running: True
+I1214 19:34:14.845964  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:54571/sc2api, attempt: 1, running: True
+I1214 19:34:17.889117  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:54571/sc2api, attempt: 2, running: True
+I1214 19:34:23.859431  5144 sc2_env.py:288] Environment is ready
+I1214 19:34:24.004057  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 19:35:17.678880  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 19:35:21.176434  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 19:36:12.999886  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:36:16.335809  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 19:37:09.601539  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 19:37:13.057070  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 19:38:06.937974  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:38:10.299874  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 19:39:02.961635  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 19:39:06.435627  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 19:39:59.200418  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 19:40:02.577291  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 19:40:53.680661  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:40:57.042619  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 19:41:49.234551  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:41:52.651582  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 19:42:45.302421  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:42:48.761113  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 19:43:41.747081  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 19:43:45.135175  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 19:44:37.776259  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:44:41.241499  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 19:45:34.178781  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:45:37.527057  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 19:46:29.331889  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:46:32.762773  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 19:47:25.009510  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:47:28.394842  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 19:48:21.338247  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:48:24.708819  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 19:49:17.540561  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:49:20.980689  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 19:50:16.891169  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:50:20.392616  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 19:51:14.274762  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 19:51:17.606042  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 19:52:09.144495  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 19:52:12.541675  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 19:53:04.274313  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [13]
+I1214 19:53:07.652216  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 19:53:59.354004  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:54:02.716169  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 19:54:53.439276  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 19:54:56.825395  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 19:55:46.992270  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 19:55:50.330241  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 19:56:40.809939  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:56:44.157338  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 19:57:34.357301  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 19:57:37.729605  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 19:58:25.633277  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:58:29.030247  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 19:59:16.947815  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 19:59:20.323461  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 20:00:10.798524  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [28]
+I1214 20:00:14.232116  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 20:01:01.283089  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:01:04.677855  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 20:01:54.298644  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [14]
+I1214 20:01:57.666500  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 20:02:45.720044  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [14]
+I1214 20:02:49.090106  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 20:03:38.443288  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [25]
+I1214 20:03:41.830644  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 20:04:28.339260  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:04:31.714497  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 20:05:15.919042  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:05:19.283114  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 20:06:04.116559  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:06:07.492512  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 20:06:51.952918  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:06:55.357255  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 20:07:39.489165  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:07:42.886704  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 20:08:28.659848  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [11]
+I1214 20:08:32.069901  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 20:09:15.870433  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:09:19.286871  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 20:10:02.897044  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:10:06.275713  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 20:10:49.619760  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:10:53.005862  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 20:11:36.508627  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:11:39.922079  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 20:12:23.105879  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:12:26.478820  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 20:13:08.795808  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:13:12.136640  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 20:13:53.931031  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:13:57.334726  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 20:14:39.981700  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:14:43.357089  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 20:15:25.228346  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:15:28.591173  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 20:16:11.378563  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:16:14.734492  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 20:16:57.459413  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:17:00.836020  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 20:17:44.783634  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:17:48.134818  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 20:18:30.376428  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:18:33.719978  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 20:19:16.343477  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:19:19.701670  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 20:20:02.231202  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:20:05.571843  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 20:20:47.740583  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:20:51.154536  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 20:21:33.609727  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:21:36.946622  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 20:22:18.997643  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:22:22.384257  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 20:23:05.012792  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:23:08.406182  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 20:23:49.725448  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:23:53.201267  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 20:24:35.871154  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:24:39.324832  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 20:25:21.579070  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:25:24.929703  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 20:26:07.100459  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:26:10.471493  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 20:26:51.763548  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:26:55.148459  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 20:27:37.352329  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:27:40.722657  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 20:28:22.343345  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:28:25.714430  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 20:28:31.179479  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 20:28:56.602848  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:28:59.952798  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 20:29:25.854201  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:29:29.220048  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 20:29:54.955059  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:29:58.332861  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 20:30:24.431975  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:30:27.773263  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 20:30:53.197786  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:30:56.593892  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+I1214 20:30:56.925538  5144 sc2_env.py:740] Environment Close
+Model with mean reward 0.0 saved to ./models/trial_7.zip
+I1214 20:30:57.028064  5144 sc_process.py:227] Shutdown gracefully.
+I1214 20:30:57.028064  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 20:30:57.029061  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 20:30:57,040] Trial 7 finished with value: 0.0 and parameters: {'learning_rate': 0.00014733821453892778, 'ent_coef': 6.620315893322081e-07, 'gamma': 0.9115082051503491, 'n_steps': 256}. Best is trial 0 with value: 0.0.
+I1214 20:30:57.044353  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 56096 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-t9j174h9\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 20:30:57.051336  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:56096/sc2api, attempt: 0, running: True
+I1214 20:31:00.106830  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:56096/sc2api, attempt: 1, running: True
+I1214 20:31:08.463836  5144 sc2_env.py:288] Environment is ready
+I1214 20:31:08.612145  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 20:31:58.077521  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:32:01.516175  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 20:32:51.576973  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 20:32:54.914643  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 20:33:45.908357  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 20:33:49.231368  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 20:34:49.269189  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 20:34:52.629783  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 20:35:42.050412  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 20:35:45.440712  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 20:36:34.779680  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:36:38.133054  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 20:37:27.955936  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 20:37:31.298121  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 20:38:31.109583  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 20:38:34.504160  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 20:39:24.805336  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 20:39:28.184627  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 20:40:18.169600  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 20:40:21.582825  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 20:41:19.750457  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:41:23.148143  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 20:42:13.202228  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 20:42:16.530520  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 20:43:06.689599  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:43:10.087548  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 20:43:59.409876  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:44:02.780531  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 20:45:02.867638  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:45:06.211927  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 20:45:58.010025  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 20:46:01.433723  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 20:46:52.167018  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 20:46:55.590208  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 20:47:56.721735  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:48:00.127367  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 20:48:49.344960  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:48:52.759740  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 20:49:42.238273  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 20:49:45.707114  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 20:50:35.353224  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 20:50:38.777740  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 20:51:39.447999  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:51:42.823697  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 20:52:32.652246  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:52:35.990696  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 20:53:25.442928  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 20:53:28.799226  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 20:54:17.926422  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:54:21.301291  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 20:55:20.690171  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:55:24.048398  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 20:56:13.907284  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:56:17.303490  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 20:57:06.887508  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 20:57:10.281703  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 20:58:10.660685  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [7]
+I1214 20:58:14.119686  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 20:59:03.154836  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:59:06.532543  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 20:59:55.692728  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 20:59:58.997888  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 21:00:48.182367  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:00:51.598124  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 21:01:51.793985  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:01:55.163586  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 21:02:43.948849  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 21:02:47.301988  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 21:03:39.625771  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:03:43.207257  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 21:04:44.361166  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:04:47.749212  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 21:05:37.638318  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:05:41.029378  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 21:06:32.030261  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:06:35.399585  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 21:07:24.491189  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:07:27.808801  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 21:08:27.972293  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:08:31.338673  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 21:09:21.718172  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:09:25.111721  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 21:10:14.422386  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:10:17.776249  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 21:11:06.642889  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:11:10.017986  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 21:12:10.437934  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:12:13.805634  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 21:13:02.677357  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 21:13:06.065280  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 21:13:56.086340  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 21:13:59.448549  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 21:14:59.343877  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:15:02.709881  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 21:15:51.567436  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:15:54.938932  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 21:16:43.899292  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:16:47.257844  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 21:17:35.813566  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:17:39.193706  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 21:18:39.620064  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:18:42.966547  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 21:19:33.202070  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:19:36.578758  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 21:20:26.304106  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:20:29.701382  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 21:21:28.941632  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:21:32.308210  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 21:22:20.195671  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:22:23.562855  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 21:23:13.119401  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:23:16.488893  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 21:24:05.983972  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:24:09.365276  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 21:25:08.397762  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:25:11.754707  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 21:26:00.078530  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:26:03.439136  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 21:26:53.314045  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 21:26:56.736416  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 21:27:46.063520  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 21:27:49.432468  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 21:28:47.518177  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:28:50.886334  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 21:29:38.554249  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:29:41.914043  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 21:30:29.774520  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:30:33.188842  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 21:30:51.786965  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 21:31:19.382363  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:31:22.774343  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 21:31:51.404365  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:31:54.808768  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 21:32:23.763086  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:32:27.183321  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 21:32:55.458052  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:32:58.813290  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 21:33:26.720429  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:33:30.072233  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+I1214 21:33:30.411972  5144 sc2_env.py:740] Environment Close
+Model with mean reward 0.0 saved to ./models/trial_8.zip
+I1214 21:33:30.513842  5144 sc_process.py:227] Shutdown gracefully.
+I1214 21:33:30.513842  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 21:33:30.513842  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 21:33:30,537] Trial 8 finished with value: 0.0 and parameters: {'learning_rate': 0.00024793071489968816, 'ent_coef': 6.6805056399583e-05, 'gamma': 0.9046765489697045, 'n_steps': 1408}. Best is trial 0 with value: 0.0.
+I1214 21:33:30.539034  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 57793 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-luwibuo1\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 21:33:30.542026  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:57793/sc2api, attempt: 0, running: True
+I1214 21:33:33.566722  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:57793/sc2api, attempt: 1, running: True
+I1214 21:33:36.613011  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:57793/sc2api, attempt: 2, running: True
+I1214 21:33:42.606424  5144 sc2_env.py:288] Environment is ready
+I1214 21:33:42.743026  5144 sc2_env.py:493] Starting episode 1: [terran] on BuildMarines
+I1214 21:34:35.869953  5144 sc2_env.py:710] Episode 1 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 21:34:39.311009  5144 sc2_env.py:493] Starting episode 2: [terran] on BuildMarines
+I1214 21:35:33.609892  5144 sc2_env.py:710] Episode 2 finished after 14400 game steps. Outcome: [1], reward: [0], score: [6]
+I1214 21:35:36.958102  5144 sc2_env.py:493] Starting episode 3: [terran] on BuildMarines
+I1214 21:36:28.525787  5144 sc2_env.py:710] Episode 3 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 21:36:31.913053  5144 sc2_env.py:493] Starting episode 4: [terran] on BuildMarines
+I1214 21:37:24.184109  5144 sc2_env.py:710] Episode 4 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 21:37:27.542221  5144 sc2_env.py:493] Starting episode 5: [terran] on BuildMarines
+I1214 21:38:19.892958  5144 sc2_env.py:710] Episode 5 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 21:38:23.230185  5144 sc2_env.py:493] Starting episode 6: [terran] on BuildMarines
+I1214 21:39:15.648913  5144 sc2_env.py:710] Episode 6 finished after 14400 game steps. Outcome: [1], reward: [0], score: [8]
+I1214 21:39:18.998209  5144 sc2_env.py:493] Starting episode 7: [terran] on BuildMarines
+I1214 21:40:12.761604  5144 sc2_env.py:710] Episode 7 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 21:40:16.151072  5144 sc2_env.py:493] Starting episode 8: [terran] on BuildMarines
+I1214 21:41:10.260879  5144 sc2_env.py:710] Episode 8 finished after 14400 game steps. Outcome: [1], reward: [0], score: [9]
+I1214 21:41:13.639604  5144 sc2_env.py:493] Starting episode 9: [terran] on BuildMarines
+I1214 21:42:07.934551  5144 sc2_env.py:710] Episode 9 finished after 14400 game steps. Outcome: [1], reward: [0], score: [10]
+I1214 21:42:11.302218  5144 sc2_env.py:493] Starting episode 10: [terran] on BuildMarines
+I1214 21:43:03.880108  5144 sc2_env.py:710] Episode 10 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 21:43:07.292963  5144 sc2_env.py:493] Starting episode 11: [terran] on BuildMarines
+I1214 21:44:00.804486  5144 sc2_env.py:710] Episode 11 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:44:04.241992  5144 sc2_env.py:493] Starting episode 12: [terran] on BuildMarines
+I1214 21:44:57.301333  5144 sc2_env.py:710] Episode 12 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:45:00.682340  5144 sc2_env.py:493] Starting episode 13: [terran] on BuildMarines
+I1214 21:45:53.593225  5144 sc2_env.py:710] Episode 13 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:45:56.983011  5144 sc2_env.py:493] Starting episode 14: [terran] on BuildMarines
+I1214 21:46:48.770926  5144 sc2_env.py:710] Episode 14 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:46:52.175462  5144 sc2_env.py:493] Starting episode 15: [terran] on BuildMarines
+I1214 21:47:45.392370  5144 sc2_env.py:710] Episode 15 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:47:48.704044  5144 sc2_env.py:493] Starting episode 16: [terran] on BuildMarines
+I1214 21:48:41.076014  5144 sc2_env.py:710] Episode 16 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:48:44.424868  5144 sc2_env.py:493] Starting episode 17: [terran] on BuildMarines
+I1214 21:49:35.816215  5144 sc2_env.py:710] Episode 17 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:49:39.215676  5144 sc2_env.py:493] Starting episode 18: [terran] on BuildMarines
+I1214 21:50:31.292694  5144 sc2_env.py:710] Episode 18 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:50:34.680393  5144 sc2_env.py:493] Starting episode 19: [terran] on BuildMarines
+I1214 21:51:25.750165  5144 sc2_env.py:710] Episode 19 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:51:29.132563  5144 sc2_env.py:493] Starting episode 20: [terran] on BuildMarines
+I1214 21:52:21.119852  5144 sc2_env.py:710] Episode 20 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:52:24.427066  5144 sc2_env.py:493] Starting episode 21: [terran] on BuildMarines
+I1214 21:53:16.727082  5144 sc2_env.py:710] Episode 21 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:53:20.098737  5144 sc2_env.py:493] Starting episode 22: [terran] on BuildMarines
+I1214 21:54:12.788563  5144 sc2_env.py:710] Episode 22 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:54:16.130136  5144 sc2_env.py:493] Starting episode 23: [terran] on BuildMarines
+I1214 21:55:08.820611  5144 sc2_env.py:710] Episode 23 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:55:12.174720  5144 sc2_env.py:493] Starting episode 24: [terran] on BuildMarines
+I1214 21:56:04.552834  5144 sc2_env.py:710] Episode 24 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:56:07.888069  5144 sc2_env.py:493] Starting episode 25: [terran] on BuildMarines
+I1214 21:56:59.637572  5144 sc2_env.py:710] Episode 25 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:57:03.054864  5144 sc2_env.py:493] Starting episode 26: [terran] on BuildMarines
+I1214 21:57:54.979944  5144 sc2_env.py:710] Episode 26 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 21:57:58.331938  5144 sc2_env.py:493] Starting episode 27: [terran] on BuildMarines
+I1214 21:58:50.589676  5144 sc2_env.py:710] Episode 27 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 21:58:53.967557  5144 sc2_env.py:493] Starting episode 28: [terran] on BuildMarines
+I1214 21:59:45.355346  5144 sc2_env.py:710] Episode 28 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 21:59:48.788028  5144 sc2_env.py:493] Starting episode 29: [terran] on BuildMarines
+I1214 22:00:40.850031  5144 sc2_env.py:710] Episode 29 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 22:00:44.196938  5144 sc2_env.py:493] Starting episode 30: [terran] on BuildMarines
+I1214 22:01:35.563905  5144 sc2_env.py:710] Episode 30 finished after 14400 game steps. Outcome: [1], reward: [0], score: [3]
+I1214 22:01:38.913168  5144 sc2_env.py:493] Starting episode 31: [terran] on BuildMarines
+I1214 22:02:30.434272  5144 sc2_env.py:710] Episode 31 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:02:33.874224  5144 sc2_env.py:493] Starting episode 32: [terran] on BuildMarines
+I1214 22:03:24.659232  5144 sc2_env.py:710] Episode 32 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:03:28.018817  5144 sc2_env.py:493] Starting episode 33: [terran] on BuildMarines
+I1214 22:04:20.505769  5144 sc2_env.py:710] Episode 33 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 22:04:23.884867  5144 sc2_env.py:493] Starting episode 34: [terran] on BuildMarines
+I1214 22:05:15.701325  5144 sc2_env.py:710] Episode 34 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:05:19.077909  5144 sc2_env.py:493] Starting episode 35: [terran] on BuildMarines
+I1214 22:06:11.228091  5144 sc2_env.py:710] Episode 35 finished after 14400 game steps. Outcome: [1], reward: [0], score: [4]
+I1214 22:06:14.653898  5144 sc2_env.py:493] Starting episode 36: [terran] on BuildMarines
+I1214 22:07:06.200315  5144 sc2_env.py:710] Episode 36 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:07:09.543375  5144 sc2_env.py:493] Starting episode 37: [terran] on BuildMarines
+I1214 22:08:00.484360  5144 sc2_env.py:710] Episode 37 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:08:03.873176  5144 sc2_env.py:493] Starting episode 38: [terran] on BuildMarines
+I1214 22:08:54.729634  5144 sc2_env.py:710] Episode 38 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:08:58.149212  5144 sc2_env.py:493] Starting episode 39: [terran] on BuildMarines
+I1214 22:09:50.734133  5144 sc2_env.py:710] Episode 39 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:09:54.088994  5144 sc2_env.py:493] Starting episode 40: [terran] on BuildMarines
+I1214 22:10:46.296614  5144 sc2_env.py:710] Episode 40 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:10:49.624379  5144 sc2_env.py:493] Starting episode 41: [terran] on BuildMarines
+I1214 22:11:42.641987  5144 sc2_env.py:710] Episode 41 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:11:46.124428  5144 sc2_env.py:493] Starting episode 42: [terran] on BuildMarines
+I1214 22:12:37.276619  5144 sc2_env.py:710] Episode 42 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:12:40.637023  5144 sc2_env.py:493] Starting episode 43: [terran] on BuildMarines
+I1214 22:13:33.276932  5144 sc2_env.py:710] Episode 43 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:13:36.651902  5144 sc2_env.py:493] Starting episode 44: [terran] on BuildMarines
+I1214 22:14:28.534226  5144 sc2_env.py:710] Episode 44 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:14:31.906400  5144 sc2_env.py:493] Starting episode 45: [terran] on BuildMarines
+I1214 22:15:24.110425  5144 sc2_env.py:710] Episode 45 finished after 14400 game steps. Outcome: [1], reward: [0], score: [5]
+I1214 22:15:27.479816  5144 sc2_env.py:493] Starting episode 46: [terran] on BuildMarines
+I1214 22:16:19.338805  5144 sc2_env.py:710] Episode 46 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:16:22.706607  5144 sc2_env.py:493] Starting episode 47: [terran] on BuildMarines
+I1214 22:17:15.440802  5144 sc2_env.py:710] Episode 47 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:17:18.819424  5144 sc2_env.py:493] Starting episode 48: [terran] on BuildMarines
+I1214 22:18:11.243644  5144 sc2_env.py:710] Episode 48 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:18:14.659226  5144 sc2_env.py:493] Starting episode 49: [terran] on BuildMarines
+I1214 22:19:08.144298  5144 sc2_env.py:710] Episode 49 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:19:11.477438  5144 sc2_env.py:493] Starting episode 50: [terran] on BuildMarines
+I1214 22:20:04.184996  5144 sc2_env.py:710] Episode 50 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:20:07.567873  5144 sc2_env.py:493] Starting episode 51: [terran] on BuildMarines
+I1214 22:20:59.725979  5144 sc2_env.py:710] Episode 51 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:21:03.120980  5144 sc2_env.py:493] Starting episode 52: [terran] on BuildMarines
+I1214 22:21:54.686506  5144 sc2_env.py:710] Episode 52 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:21:58.061967  5144 sc2_env.py:493] Starting episode 53: [terran] on BuildMarines
+I1214 22:22:50.842263  5144 sc2_env.py:710] Episode 53 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:22:54.256122  5144 sc2_env.py:493] Starting episode 54: [terran] on BuildMarines
+I1214 22:23:45.990365  5144 sc2_env.py:710] Episode 54 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:23:49.387923  5144 sc2_env.py:493] Starting episode 55: [terran] on BuildMarines
+I1214 22:24:42.460309  5144 sc2_env.py:710] Episode 55 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 22:24:45.833603  5144 sc2_env.py:493] Starting episode 56: [terran] on BuildMarines
+I1214 22:25:37.897571  5144 sc2_env.py:710] Episode 56 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:25:41.300148  5144 sc2_env.py:493] Starting episode 57: [terran] on BuildMarines
+I1214 22:26:33.597637  5144 sc2_env.py:710] Episode 57 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:26:37.024289  5144 sc2_env.py:493] Starting episode 58: [terran] on BuildMarines
+I1214 22:27:29.062258  5144 sc2_env.py:710] Episode 58 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:27:32.424348  5144 sc2_env.py:493] Starting episode 59: [terran] on BuildMarines
+I1214 22:28:24.816602  5144 sc2_env.py:710] Episode 59 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:28:28.261830  5144 sc2_env.py:493] Starting episode 60: [terran] on BuildMarines
+I1214 22:29:18.777306  5144 sc2_env.py:710] Episode 60 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:29:22.147870  5144 sc2_env.py:493] Starting episode 61: [terran] on BuildMarines
+I1214 22:30:12.466244  5144 sc2_env.py:710] Episode 61 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:30:15.972767  5144 sc2_env.py:493] Starting episode 62: [terran] on BuildMarines
+I1214 22:31:07.836642  5144 sc2_env.py:710] Episode 62 finished after 14400 game steps. Outcome: [1], reward: [0], score: [2]
+I1214 22:31:11.247779  5144 sc2_env.py:493] Starting episode 63: [terran] on BuildMarines
+I1214 22:32:03.171105  5144 sc2_env.py:710] Episode 63 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:32:06.528558  5144 sc2_env.py:493] Starting episode 64: [terran] on BuildMarines
+I1214 22:32:58.211767  5144 sc2_env.py:710] Episode 64 finished after 14400 game steps. Outcome: [1], reward: [0], score: [1]
+I1214 22:33:01.640360  5144 sc2_env.py:493] Starting episode 65: [terran] on BuildMarines
+I1214 22:33:06.172540  5144 sc2_env.py:493] Starting episode 66: [terran] on BuildMarines
+I1214 22:33:31.614945  5144 sc2_env.py:710] Episode 66 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:33:34.982918  5144 sc2_env.py:493] Starting episode 67: [terran] on BuildMarines
+I1214 22:34:00.588297  5144 sc2_env.py:710] Episode 67 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:34:03.937605  5144 sc2_env.py:493] Starting episode 68: [terran] on BuildMarines
+I1214 22:34:29.148079  5144 sc2_env.py:710] Episode 68 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:34:32.484404  5144 sc2_env.py:493] Starting episode 69: [terran] on BuildMarines
+I1214 22:34:57.855254  5144 sc2_env.py:710] Episode 69 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:35:01.212108  5144 sc2_env.py:493] Starting episode 70: [terran] on BuildMarines
+I1214 22:35:26.708929  5144 sc2_env.py:710] Episode 70 finished after 14400 game steps. Outcome: [1], reward: [0], score: [0]
+I1214 22:35:30.062128  5144 sc2_env.py:493] Starting episode 71: [terran] on BuildMarines
+I1214 22:35:30.396227  5144 sc2_env.py:740] Environment Close
+Model with mean reward 0.0 saved to ./models/trial_9.zip
+I1214 22:35:30.497934  5144 sc_process.py:227] Shutdown gracefully.
+I1214 22:35:30.497934  5144 sc_process.py:205] Shutdown with return code: 1
+I1214 22:35:30.497934  5144 sc2_env.py:740] Environment Close
+[I 2024-12-14 22:35:30,505] Trial 9 finished with value: 0.0 and parameters: {'learning_rate': 7.087096600222036e-05, 'ent_coef': 0.006151366344996792, 'gamma': 0.9225253474197449, 'n_steps': 128}. Best is trial 0 with value: 0.0.
+I1214 22:35:30.509902  5144 sc_process.py:130] Launching SC2: D:/Blizzard/StarCraft II\Versions/Base93333\SC2_x64.exe -listen 127.0.0.1 -port 59417 -dataDir D:/Blizzard/StarCraft II\ -tempDir D:\TEMP_Environment_vars_NEBRISHI\sc-vnvl5dxs\ -displayMode 0 -windowwidth 640 -windowheight 480 -windowx 50 -windowy 50
+I1214 22:35:30.513892  5144 remote_controller.py:162] Connecting to: ws://127.0.0.1:59417/sc2api, attempt: 0, running: True
+
+Best Hyperparameters:
+{'learning_rate': 0.0030162931251012746, 'ent_coef': 8.453647373914482e-06, 'gamma': 0.9232610456089543, 'n_steps': 1280}
+Optuna study saved to ./optuna_study.pkl
