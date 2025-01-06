@@ -1,6 +1,7 @@
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3 import PPO
 from build_marines_actions import BuildMarinesActionManager
+from dagger_training import dagger_training
 from eval_random_agent import evaluate
 from sc2env import PySC2GymWrapper
 from absl import app, flags
@@ -10,24 +11,27 @@ import pickle
 
 def objective(trial):
     """Objective function for Optuna to optimize PPO hyperparameters."""
-    learning_rate = trial.suggest_float('learning_rate', 1e-5, 1e-2, log=True)
-    ent_coef = trial.suggest_float('ent_coef', 1e-8, 1e-2, log=True)
-    gamma = trial.suggest_float('gamma', 0.8, 0.9999)
+    learning_rate = trial.suggest_float('learning_rate', 1e-5, 1e-1, log=True)
+    ent_coef = trial.suggest_float('ent_coef', 1e-8, 1e-1, log=True)
+    gamma = trial.suggest_float('gamma', 0.5, 0.9999)
     n_steps = trial.suggest_int('n_steps', 128, 2048, step=128)
 
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
-    model = PPO(
-        'MlpPolicy',
-        env,
-        verbose=0,
-        learning_rate=learning_rate,
-        gamma=gamma,
-        ent_coef=ent_coef,
-        n_steps=n_steps,
-    )
 
-    # Should be ~80 episodes
-    model.learn(total_timesteps=115200)
+    # Better practice is to load weights instead of entire model
+    # Load the pretrained DAgger model
+    dagger_model_path = './models/dagger_model.zip'
+    model = PPO.load(dagger_model_path, env=env)
+
+    # Update the model with trial's hyperparameters
+    model.learning_rate = learning_rate
+    model.gamma = gamma
+    model.ent_coef = ent_coef
+    model.n_steps = n_steps
+
+    model.learn(total_timesteps=1000000)
+
+    print(f"Evaluating trial {trial.number}:")
 
     mean_reward, _ = evaluate_policy(
         model,
@@ -49,6 +53,12 @@ def main(_):
     if flags.FLAGS.eval_random:
         evaluate()
 
+    env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
+
+    # Step 1: Train with DAgger
+    dagger_model_path = './models/dagger_model.zip'
+    dagger_model = dagger_training(env, model_path=dagger_model_path)
+
     study = optuna.create_study(direction='maximize', study_name='ABS-SC2-BuildMarines')
     study.optimize(objective, n_trials=10)
 
@@ -63,7 +73,7 @@ def main(_):
     best_trial = study.best_trial
 
     best_model_path = f'./models/ppo_trial_{best_trial.number}.zip'
-    env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
+    env = PySC2GymWrapper(num_actions=[5, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
     model = PPO.load(best_model_path, env=env)
     print(f"Loaded model from {best_model_path} for additional training")
 

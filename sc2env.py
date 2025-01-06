@@ -35,8 +35,11 @@ class PySC2GymWrapper(gym.Env):
         self.action_space = spaces.MultiDiscrete(num_actions)
         minimap_shape = self.sc2_env.observation_spec()[0]["feature_minimap"]
         self.observation_space = spaces.Box(
-            low=0, high=255, shape=minimap_shape, dtype=np.float32
+            low=0, high=255, shape=minimap_shape, dtype=np.uint8
         )
+        # full_obs_shape = self.sc2_env.observation_spec()[0]
+        #
+        # self.observation_space = spaces.Box(low=0, high=255, shape=(len(full_obs_shape), ), dtype=np.uint8)
 
         self.current_obs = None
         self.action_manager = action_manager
@@ -52,6 +55,8 @@ class PySC2GymWrapper(gym.Env):
         timestep = self.sc2_env.step(action_step)
 
         observation = self._process_observation_to_minimap(timestep[0])
+        # self.current_obs = timestep[0]
+        # observation = timestep[0].observation["feature_minimap"]
         reward = timestep[0].reward
         done = timestep[0].last()
 
