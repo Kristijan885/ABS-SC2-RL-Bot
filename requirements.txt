@@ -6,3 +6,4 @@ pandas
 gymnasium~=0.29.1
 protobuf==3.20.*
 optuna~=4.1.0
+imitation
