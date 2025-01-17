@@ -1,59 +1,86 @@
+import os
+import tempfile
+
+import numpy as np
+from imitation.algorithms.bc import BC
 from imitation.algorithms.dagger import SimpleDAggerTrainer
 from imitation.data.wrappers import RolloutInfoWrapper
-from imitation.util.util import make_vec_env
-from imitation.algorithms.bc import BC
+from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
-from imitation.policies.base import RandomPolicy
 
 from dagger_expert_policy import ExpertPolicy
-
-from stable_baselines3 import PPO
-import numpy as np
 
 
 def dagger_training(env, model_path="./models/dagger_model.zip"):
     """
-    Pre-train a PPO model using DAgger, preparing it for Optuna fine-tuning.
-    The model will maintain its architecture and parameters for further optimization.
+    Pre-train a PPO model using DAgger, preparing it for further fine-tuning.
+
+    Args:
+        env: The environment to train in
+        model_path: Path to save the trained model
+
+    Returns:
+        PPO: The trained PPO model
     """
+    # Ensure the model directory exists
+    os.makedirs(os.path.dirname(model_path), exist_ok=True)
 
-    # Wrap the environment in a DummyVecEnv if needed
-    if not hasattr(env, 'num_envs'):
-        venv = DummyVecEnv([lambda: env])
+    # Properly wrap the environment
+    if isinstance(env, DummyVecEnv):
+        venv = env
+    else:
+        venv = DummyVecEnv([lambda: RolloutInfoWrapper(env)])
 
-    # Initialize the PPO model that will be trained
-    ppo_model = PPO("CnnPolicy", env, verbose=1)
+    ppo_model = PPO(
+        "CnnPolicy",
+        venv,
+        verbose=1,
+        learning_rate=3e-4,
+        n_steps=2048,
+        batch_size=64,
+        n_epochs=10,
+        gamma=0.99,
+        gae_lambda=0.95,
+        clip_range=0.2,
+        policy_kwargs={"net_arch": [dict(pi=[64, 64], vf=[64, 64])]}
+    )
 
-    # Create scratch directory if it doesn't exist
-    scratch_dir = "./dagger_scratch"
-
-    # Create BC trainer that will update the PPO model's policy
     bc_trainer = BC(
-        observation_space=env.observation_space,
-        action_space=env.action_space,
-        demonstrations=None,
-        policy=ppo_model.policy,  # Use the PPO's policy directly
-        device="auto",
-        rng=np.random.seed(seed=48)
+        observation_space=venv.observation_space,
+        action_space=venv.action_space,
+        policy=ppo_model.policy,
+        rng=np.random.default_rng(42),
+        batch_size=32,
+        l2_weight=0.01
     )
 
-    # Initialize DAgger trainer
-    dagger_trainer = SimpleDAggerTrainer(
-        venv=venv,
-        bc_trainer=bc_trainer,
-        expert_policy=ExpertPolicy(env),
-        scratch_dir=scratch_dir,
-        beta_schedule=lambda step: max(0.9 - step * 0.1, 0),
-        rng=np.random.default_rng(seed=42)
-    )
+    try:
+        with tempfile.TemporaryDirectory(prefix="dagger_") as tmpdir:
+            print(f"Using temporary directory: {tmpdir}")
 
-    # Run DAgger iterations
-    for i in range(5):
-        print(f"Starting DAgger iteration {i + 1}/5")
-        dagger_trainer.train(2000)
+            dagger_trainer = SimpleDAggerTrainer(
+                venv=venv,
+                scratch_dir=tmpdir,
+                expert_policy=ExpertPolicy(env),
+                bc_trainer=bc_trainer,
+                rng=np.random.default_rng(42),
+            )
 
-    # Save the pre-trained PPO model
-    ppo_model.save(model_path)
-    print(f"DAgger pre-trained PPO model saved to {model_path}")
+            print("Starting DAgger training...")
+            try:
+                dagger_trainer.train(
+                    total_timesteps=200000,
+                )
+            except Exception as e:
+                print(f"Error during DAgger training: {str(e)}")
+                raise
 
-    return ppo_model
+            print(f"Saving model to {model_path}")
+            ppo_model.save(model_path)
+            print("Model saved successfully")
+
+            return ppo_model
+
+    except Exception as e:
+        print(f"Error in DAgger training: {str(e)}")
+        raise
