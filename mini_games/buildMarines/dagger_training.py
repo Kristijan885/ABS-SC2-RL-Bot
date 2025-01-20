@@ -9,6 +9,10 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 from dagger_expert_policy import ExpertPolicy
+from dagger_demo_monkey_patch import safe_save_dagger_demo
+import imitation.algorithms.dagger
+
+imitation.algorithms.dagger._save_dagger_demo = safe_save_dagger_demo
 
 
 def dagger_training(env, model_path="./models/dagger_model.zip"):
@@ -63,6 +67,7 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
                 scratch_dir=tmpdir,
                 expert_policy=ExpertPolicy(env),
                 bc_trainer=bc_trainer,
+                beta_schedule=lambda step: max(1 - step * 0.0001, 0.05),  # Slower decay
                 rng=np.random.default_rng(42),
             )
 
