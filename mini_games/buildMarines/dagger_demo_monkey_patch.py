@@ -36,9 +36,8 @@ def safe_save(npz_path, trajectories: list[types.Trajectory]):
 
     if num_shards == 1:
         # Save the entire dataset as a single shard
-        shard_path = f"{npz_path}_shard_0"
-        dataset.save_to_disk(shard_path, num_shards=num_shards)
-        print(f"Single shard saved to {shard_path}")
+        dataset.save_to_disk(npz_path, num_shards=num_shards)
+        print(f"Single shard saved to {npz_path}")
         return
 
     # Save multiple shards if applicable
