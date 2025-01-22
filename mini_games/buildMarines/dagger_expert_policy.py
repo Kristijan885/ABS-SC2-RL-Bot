@@ -13,8 +13,8 @@ DEPOT_BUILD_ORDER_ID = 362
 BUILD_ORDERS = [DEPOT_CHASE_BUILD_ID, BARRACK_CHASE_BUILD_ID, DEPOT_BUILD_ORDER_ID]
 
 # Don't even think these are defined anywhere
-DEPOT_RADIUS = 4
-BARRACK_RADIUS = 6
+DEPOT_DIAMETER = 8
+BARRACK_DIAMETER = 12
 
 
 class ExpertPolicy(policies.BasePolicy, ABC):
@@ -40,7 +40,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         action = no_op_action()
 
         if self.should_build_supply_depot(observation, minerals, supply_used, supply_max):
-            action = self.build_supply_depot()
+            action = self.build_supply_depot(observation)
 
         elif self.should_train_marine(observation, minerals, supply_max, supply_used):
             action = train_marine_action()
@@ -52,7 +52,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
             action = select_scv_action()
 
         elif self.should_build_barracks(observation, minerals):
-            action = self.build_barracks()
+            action = self.build_barracks(observation)
 
         return torch.from_numpy(action)
 
@@ -85,30 +85,34 @@ class ExpertPolicy(policies.BasePolicy, ABC):
                 and not is_selected_unit_building(observation, units.Terran.SCV)
         )
 
-    def build_supply_depot(self):
+    def build_supply_depot(self, observation):
         coords = self.get_next_depot_coords()
         self.last_depot = coords
-        self.expected_depot_count += 1
-        print(f"---------------BUILD DEPOT {coords[0]} | {coords[1]}--------------")
+
+        while are_occupied_coords_depot(observation, coords):
+            coords = self.get_next_depot_coords()
+
         return build_action(2, coords)
 
-    def build_barracks(self):
+    def build_barracks(self, observation):
         coords = self.get_next_barracks_coords()
         self.last_barracks = coords
-        self.expected_barrack_count += 1
-        print(f"---------------BUILD BARRACK {coords[0]} | {coords[1]}--------------")
+
+        while are_occupied_coords_barrack(observation, coords):
+            coords = self.get_next_barracks_coords()
+
         return build_action(1, coords)
 
     def get_next_depot_coords(self):
-        coords = (self.last_depot[0] - DEPOT_RADIUS, self.last_depot[1])
-        if coords[0] < 0:
-            coords = (64 - DEPOT_RADIUS, coords[1] - DEPOT_RADIUS)
+        coords = (self.last_depot[0] - DEPOT_DIAMETER, self.last_depot[1])
+        if coords[0] < 1:
+            coords = (64 - DEPOT_DIAMETER, max(coords[1] - DEPOT_DIAMETER, 1))
         return coords
 
     def get_next_barracks_coords(self):
-        coords = (self.last_barracks[0] + BARRACK_RADIUS, self.last_barracks[1])
-        if coords[0] > 83:
-            coords = (10, coords[1] + BARRACK_RADIUS)
+        coords = (self.last_barracks[0] + BARRACK_DIAMETER, self.last_barracks[1])
+        if coords[0] > 84:
+            coords = (10, min(coords[1] + BARRACK_DIAMETER, 84))
         return coords
 
 
@@ -150,3 +154,25 @@ def is_selected_unit_building(obs, unit_type):
 
     unit = selected_units[0]
     return unit.order_id_0 in BUILD_ORDERS or unit.order_id_1 in BUILD_ORDERS
+
+
+def are_occupied_coords_barrack(obs, coords):
+    # Safety checks for coords might be redundant, but don't hurt
+    for x in range(coords[0], min(coords[0] + BARRACK_DIAMETER, 84)):
+        for y in range(coords[1], min(coords[1] + BARRACK_DIAMETER, 64)):
+            screen_unit = obs.feature_screen.unit_type[x][y]
+            if screen_unit == 0 or (screen_unit != units.Terran.SCV and screen_unit != units.Terran.Marine):
+                return False
+
+    return True
+
+
+def are_occupied_coords_depot(obs, coords):
+    for x in range(max(coords[0] - DEPOT_DIAMETER, 1), coords[0]):
+        for y in range(max(coords[1] - DEPOT_DIAMETER, 1), coords[1]):
+            screen_unit = obs.feature_screen.unit_type[x][y]
+            if screen_unit == 0 or (screen_unit != units.Terran.SCV and screen_unit != units.Terran.Marine):
+                return False
+
+    return True
+
