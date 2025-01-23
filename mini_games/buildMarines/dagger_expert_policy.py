@@ -27,8 +27,6 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         self.expected_barrack_count = 0
         self.expected_depot_count = 0
 
-        print("---EXPERT INIT---")
-
     def _predict(self, obs, deterministic=False):
         observation = self.env.current_obs.observation
 
@@ -99,14 +97,14 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         coords = self.get_next_barracks_coords()
 
         while not are_unoccupied_coords_barrack(observation, coords):
-            coords = self.get_next_barracks_coords
+            coords = self.get_next_barracks_coords()
 
         return build_action(1, coords)
 
     def get_next_depot_coords(self):
         coords = (self.last_depot[0] - DEPOT_DIAMETER, self.last_depot[1])
         if coords[0] < 1:
-            coords = (64 - DEPOT_DIAMETER, max(coords[1] - DEPOT_DIAMETER, 1))
+            coords = (64 - DEPOT_RADIUS, max(coords[1] - DEPOT_RADIUS, 1))
 
         self.last_depot = coords
         return coords
@@ -114,7 +112,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
     def get_next_barracks_coords(self):
         coords = (self.last_barracks[0] + BARRACK_DIAMETER, self.last_barracks[1])
         if coords[0] > 84:
-            coords = (10, min(coords[1] + BARRACK_DIAMETER, 84))
+            coords = (10, min(coords[1] + BARRACK_RADIUS + 1, 84))
 
         self.last_barracks = coords
         return coords
