@@ -102,7 +102,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         return build_action(1, coords)
 
     def get_next_depot_coords(self):
-        coords = (self.last_depot[0] - DEPOT_DIAMETER, self.last_depot[1])
+        coords = (self.last_depot[0] - DEPOT_RADIUS, self.last_depot[1])
         if coords[0] < 1:
             coords = (64 - DEPOT_RADIUS, max(coords[1] - DEPOT_RADIUS, 1))
 
@@ -110,9 +110,9 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         return coords
 
     def get_next_barracks_coords(self):
-        coords = (self.last_barracks[0] + BARRACK_DIAMETER, self.last_barracks[1])
+        coords = (self.last_barracks[0] + BARRACK_RADIUS, self.last_barracks[1])
         if coords[0] > 84:
-            coords = (10, min(coords[1] + BARRACK_RADIUS + 1, 84))
+            coords = (10, min(coords[1] + BARRACK_RADIUS + 1, 64))
 
         self.last_barracks = coords
         return coords

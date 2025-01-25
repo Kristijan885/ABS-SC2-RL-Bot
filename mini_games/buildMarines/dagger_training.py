@@ -39,14 +39,11 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
         "CnnPolicy",
         venv,
         verbose=1,
-        learning_rate=3e-4,
-        n_steps=2048,
-        batch_size=64,
-        n_epochs=10,
-        gamma=0.99,
-        gae_lambda=0.95,
-        clip_range=0.2,
-        policy_kwargs={"net_arch": [dict(pi=[64, 64], vf=[64, 64])]}
+        learning_rate=1e-3,  # Higher learning rate
+        n_steps=512,  # Smaller steps
+        batch_size=32,  # Smaller batch size
+        n_epochs=20,  # More epochs
+        gamma=0.99
     )
 
     bc_trainer = BC(
@@ -55,7 +52,7 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
         policy=ppo_model.policy,
         rng=np.random.default_rng(42),
         batch_size=32,
-        l2_weight=0.01
+        l2_weight=0.001,
     )
 
     try:
@@ -67,14 +64,14 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
                 scratch_dir=tmpdir,
                 expert_policy=ExpertPolicy(env),
                 bc_trainer=bc_trainer,
-                beta_schedule=lambda step: max(1 - step * 0.0001, 0.05),  # Slower decay
+                beta_schedule=lambda step: 0.9,  # High expert reliance
                 rng=np.random.default_rng(42),
             )
 
             print("Starting DAgger training...")
             try:
                 dagger_trainer.train(
-                    total_timesteps=200000,
+                    total_timesteps=144000,
                 )
             except Exception as e:
                 print(f"Error during DAgger training: {str(e)}")
