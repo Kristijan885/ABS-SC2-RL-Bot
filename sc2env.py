@@ -21,6 +21,8 @@ class PySC2GymWrapper(gym.Env):
             ],
             agent_interface_format=features.AgentInterfaceFormat(
                 feature_dimensions=features.Dimensions(screen=84, minimap=64),
+                rgb_dimensions=features.Dimensions(screen=168, minimap=64),
+                action_space=actions.ActionSpace.FEATURES,
                 use_feature_units=True,
                 crop_to_playable_area=True
                 # raw_resolution=(84, 84),
@@ -33,7 +35,7 @@ class PySC2GymWrapper(gym.Env):
         )
 
         self.action_space = spaces.MultiDiscrete(num_actions)
-        minimap_shape = self.sc2_env.observation_spec()[0]["feature_minimap"]
+        minimap_shape = self.sc2_env.observation_spec()[0].rgb_screen
         self.observation_space = spaces.Box(
             low=0, high=255, shape=minimap_shape, dtype=np.uint8
         )
@@ -46,19 +48,25 @@ class PySC2GymWrapper(gym.Env):
 
     def reset(self, *args, **kwargs):
         timestep = self.sc2_env.reset()  # or self.sc2_env.reset(**kwargs) if needed
-        observation = self._process_observation_to_minimap(timestep[0])
+        # observation = self._process_observation_to_minimap(timestep[0])
+        self.current_obs = timestep[0]
+        observation = timestep[0].observation.rgb_screen
         info = {}  # Used to satisfy the format needs
+        observation = observation.astype(np.uint8)
+        # Convert a channel-last observation (HWC) to channel-first (CHW)
+
         return observation, info
 
     def step(self, action):
         action_step = self.action_manager.get_actions(self.current_obs.observation, action)
         timestep = self.sc2_env.step(action_step)
 
-        observation = self._process_observation_to_minimap(timestep[0])
-        # self.current_obs = timestep[0]
-        # observation = timestep[0].observation["feature_minimap"]
-        reward = timestep[0].reward
+        # observation = self._process_observation_to_minimap(timestep[0])
+        self.current_obs = timestep[0]
+        observation = timestep[0].observation.rgb_screen
+        reward = float(timestep[0].reward)
         done = timestep[0].last()
+        observation = observation.astype(np.uint8)
 
         return observation, reward, done, False, {}
 
@@ -68,10 +76,10 @@ class PySC2GymWrapper(gym.Env):
     def close(self):
         self.sc2_env.close()
 
-    def _process_observation_to_minimap(self, timestep):
-        self.current_obs = timestep
-
-        # Extract and preprocess the minimap data
-        minimap = timestep.observation["feature_minimap"]
-        processed_minimap = minimap / 255.0  # Normalizing
-        return processed_minimap
+    # def _process_observation_to_minimap(self, timestep):
+    #     self.current_obs = timestep
+    #
+    #     # Extract and preprocess the minimap data
+    #     minimap = timestep.observation.rgb_screen
+    #     processed_minimap = minimap / 255.0  # Normalizing
+    #     return processed_minimap

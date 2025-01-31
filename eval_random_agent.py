@@ -3,7 +3,7 @@ from sc2env import PySC2GymWrapper
 import numpy as np
 
 
-def evaluate(n_eval_episodes=10):
+def evaluate(n_eval_episodes=50):
     """Evaluate a random agent by sampling actions from the action space."""
     print("Evaluating random actions agent...")
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), visualize=False)

@@ -7,6 +7,7 @@ from sc2env import PySC2GymWrapper
 from absl import app, flags
 import optuna
 import pickle
+import numpy as np
 
 
 def objective(trial):
@@ -15,7 +16,6 @@ def objective(trial):
     ent_coef = trial.suggest_float('ent_coef', 1e-8, 1e-1, log=True)
     gamma = trial.suggest_float('gamma', 0.5, 0.9999)
     n_steps = trial.suggest_int('n_steps', 128, 2048, step=128)
-
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
 
     # Better practice is to load weights instead of entire model
@@ -52,6 +52,10 @@ def objective(trial):
 def main(_):
     if flags.FLAGS.eval_random:
         evaluate()
+
+    # Limit memory usage for numpy
+    np.ones(1).nbytes  # Force numpy to initialize
+    np.set_printoptions(threshold=1000)
 
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
 
