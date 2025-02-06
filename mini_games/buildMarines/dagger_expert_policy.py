@@ -23,12 +23,11 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         self.env = env
         self.supply_threshold = 5  # Threshold to build a supply depot
         self.last_barracks = (10, 10)
-        self.last_depot = (64, 64)  # Map height is 64
-        self.expected_barrack_count = 0
-        self.expected_depot_count = 0
+        self.last_depot = (64, 64)  # Map height in feature screen is 64
 
     def _predict(self, obs, deterministic=False):
         observation = self.env.envs[0].current_obs.observation
+        # gymnasium suggests access like below (above will be deprecated)
         # observation = self.env.unwrapped.current_obs.observation
 
         minerals = observation.player[1]
@@ -36,6 +35,11 @@ class ExpertPolicy(policies.BasePolicy, ABC):
         supply_max = observation.player[4]
         barracks = get_units_by_type(observation, units.Terran.Barracks)
         available_barracks = [b for b in barracks if b.build_progress == 100 and b.order_length < 5]
+
+        # Next episode coords reset
+        if supply_max == 15 and self.last_depot != (64, 64):
+            self.last_depot = (64, 64)
+            self.last_barracks = (10, 10)
 
         # Default action no op
         action = no_op_action()
@@ -104,7 +108,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
 
     def get_next_depot_coords(self):
         coords = (self.last_depot[0] - DEPOT_DIAMETER, self.last_depot[1])
-        if coords[0] < 1:
+        if coords[0] <= 1:
             coords = (64 - DEPOT_RADIUS, max(coords[1] - DEPOT_RADIUS, 1))
 
         self.last_depot = coords
@@ -112,7 +116,7 @@ class ExpertPolicy(policies.BasePolicy, ABC):
 
     def get_next_barracks_coords(self):
         coords = (self.last_barracks[0] + BARRACK_DIAMETER, self.last_barracks[1])
-        if coords[0] > 84:
+        if coords[0] >= 84:
             coords = (10, min(coords[1] + BARRACK_RADIUS + 1, 64))
 
         self.last_barracks = coords
