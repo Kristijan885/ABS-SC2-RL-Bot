@@ -42,21 +42,22 @@ def evaluate_model(model_path, num_episodes=50):
             episode_reward += reward
 
             if done:
-                print(f"Episode {episode + 1} finished with reward: {episode_reward}")
                 total_rewards.append(episode_reward)
 
-    avg_reward = np.mean(total_rewards)
-    print(f"Average reward over {num_episodes} episodes: {avg_reward}")
+    mean_reward = np.mean(total_rewards)
+    std_reward = np.std(total_rewards)
+
+    print(f"Mean reward over {num_episodes} episodes: {mean_reward} +/- {std_reward}")
 
     env.close()
 
-    return avg_reward
+    return mean_reward
 
 
 def main(_):
-    evaluate_model(flags.FLAGS.model_path)
+    evaluate_model(flags.FLAGS.model_path, 50)
 
 
 if __name__ == "__main__":
-    flags.DEFINE_string('model_path', './models/dagger_model_23.zip', 'Path to the pretrained model')
+    flags.DEFINE_string('model_path', './models/buildMarines_optuna.zip', 'Path to the pretrained model')
     app.run(main)

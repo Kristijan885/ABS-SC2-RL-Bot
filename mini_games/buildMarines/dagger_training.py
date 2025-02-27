@@ -100,7 +100,7 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
         bc_model_path = model_path.replace(".zip", "_bc.zip")
         ppo_model.save(bc_model_path)
 
-    for i in range(flags.FLAGS.dagger_range):
+    for i in range(flags.FLAGS.dagger_range, 100):
         try:
             with tempfile.TemporaryDirectory() as tmpdir:
                 dagger_trainer = SimpleDAggerTrainer(
@@ -115,24 +115,27 @@ def dagger_training(env, model_path="./models/dagger_model.zip"):
                 print("Training DAgger...")
                 dagger_trainer.train(total_timesteps=15000)  # Lower timesteps because of my memory limitations
 
-                ppo_model.save(model_path)
-                return ppo_model
+                if i % 5 == 0:
+                    model_path = model_path.replace(".zip", f"_{i}.zip")
+                    print(f"Saving model {model_path}")
+                    ppo_model.save(model_path)
 
         except Exception as e:
             print(f"DAgger training error: {str(e)}")
             raise
 
+    return ppo_model
+
 
 def main(_):
     env = PySC2GymWrapper(num_actions=[6, 84, 84], action_manager=BuildMarinesActionManager(), step_mul=None)
 
-    dagger_model_path = './models/dagger_model.zip'
-    dagger_training(env, model_path=dagger_model_path)
+    dagger_training(env)
 
 
 if __name__ == '__main__':
-    flags.DEFINE_integer('dagger_range', 1, 'Number of times to restart DAgger training (for reduced memory usage for demonstrations)')
-    flags.DEFINE_integer('load_model', None, 'Load previously trained model for further training (format dagger_model_{N}.zip)')
+    flags.DEFINE_integer('dagger_range', 46, 'Number of times to restart DAgger training (for reduced memory usage for demonstrations)')
+    flags.DEFINE_integer('load_model', 45, 'Load previously trained model for further training (format dagger_model_{N}.zip)')
     flags.DEFINE_boolean('train_bc', False, 'Whether or not to train BC with single demonstration for eval')
 
     app.run(main)
