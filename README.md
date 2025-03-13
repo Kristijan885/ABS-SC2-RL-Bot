@@ -60,4 +60,4 @@ MIT
 
 ## References and Research
 
-This project was evaluated by us in [Reinforcement Learning Methodologies for DeepMind's StarCraft-2 Mini-game Environment](sc2_rl_paper.pdf) (Krstev, Panchevski, Gievska & Tosheska, 2025).
+This project was evaluated by us in [Reinforcement Learning Methodologies for DeepMind's StarCraft-2 Mini-game Environment](DAgger%20Imitation%20Learning%20StarCraft%202.pdf) (Krstev, Panchevski, Gievska & Tosheska, 2025). (Krstev, Panchevski, Gievska & Tosheska, 2025).
