@@ -60,4 +60,4 @@ MIT
 
 ## References and Research
 
-This project uses methods from [Reinforcement Learning Methodologies for DeepMind's StarCraft-2 Mini-game Environment](docs/sc2_rl_paper.pdf) (Krstev, Panchevski, Gievska & Tosheska, 2025).
+This project was evaluated by us in [Reinforcement Learning Methodologies for DeepMind's StarCraft-2 Mini-game Environment](sc2_rl_paper.pdf) (Krstev, Panchevski, Gievska & Tosheska, 2025).
