@@ -1,6 +1,6 @@
 # SC2-BuildMarines-RL
 
-A StarCraft II bot I built that learns to crank out marines using a mix of imitation learning and reinforcement learning techniques.
+A StarCraft II bot we built that learns to crank out marines using a mix of imitation learning and reinforcement learning techniques.
 
 ## What it does
 
