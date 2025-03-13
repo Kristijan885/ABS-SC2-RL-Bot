@@ -4,11 +4,24 @@ A StarCraft II bot I built that learns to crank out marines using a mix of imita
 
 ## What it does
 
-This bot learns to efficiently run a marine production line in the SC2 BuildMarines mini-game:
-- Selects SCVs to do the dirty work
-- Builds supply depots right before hitting the supply cap
-- Places barracks in good spots
-- Pumps out marines as fast as resources allow
+This bot learns to efficiently produce marines in the SC2 BuildMarines mini-game by performing these key actions:
+- Selecting worker SCVs
+- Selecting barracks buildings
+- Building supply depots to increase population capacity
+- Constructing barracks for marine production
+- Training marines whenever resources are available
+- Managing resource allocation between buildings and units
+
+## Environment
+
+The environment is wrapped with a custom Gym interface that:
+- Uses a MultiDiscrete action space [6, 84, 84] representing:
+ - Action type (select SCV, build barracks, build supply, etc.)
+ - X coordinate on the map
+ - Y coordinate on the map
+- Processes raw SC2 observations into a format suitable for CNN-based policies
+- Handles reward calculation based on marine production and resource efficiency
+- Manages transitions between game states and episode termination
 
 ## How it works
 
@@ -20,7 +33,7 @@ This bot learns to efficiently run a marine production line in the SC2 BuildMari
 ## Code structure
 
 - `build_marines_actions.py` - Defines all possible game actions
-- `dagger_expert_policy.py` - My hand-coded expert that knows the basics
+- `dagger_expert_policy.py` - Our hand-coded expert that knows the basics
 - `dagger_training.py` - DAgger implementation to learn from the expert
 - `train_build_marines.py` - Main training script with hyperparameter tuning
 - `eval.py` - Scripts to test how good the bot actually is
@@ -30,12 +43,12 @@ This bot learns to efficiently run a marine production line in the SC2 BuildMari
 1. Clone this repo
 2. Make sure you have StarCraft II installed with the mini-games
 3. Install requirements
-4. Run training or evaluation scripts (see docs folder)
+4. Run training or evaluation scripts
 
 ## Requirements
 
 - Python 3.7+
-- StarCraft II + Mini-game maps
+- StarCraft II + Mini-game maps (downloaded seperately)
 - PySC2
 - Stable-Baselines3
 - Optuna
